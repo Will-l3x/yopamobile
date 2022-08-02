@@ -2,10 +2,12 @@ import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity,KeyboardAvoidingView, Image } from 'react-native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import {Picker} from '@react-native-picker/picker';
+import CheckBox from '@react-native-community/checkbox';
+//import CheckBox from '@react-native-community/checkbox';
 import logs from '../../assets/logo.png';
 
 
-export default class SignUp extends React.Component {
+export default class FinishSignUp extends React.Component {
     state={
         emailAddress:"",
         password:"",
@@ -16,6 +18,7 @@ export default class SignUp extends React.Component {
         userInterestsArray:['A54F9E74-3AE0-4E65-2506-08DA6283048D', "A54F9E74-3AE0-4E65-2506-08DA6283047D"],
         roleNames:[],
         dummy: '',
+        ToggleCheckBox: false
     }
 
     Register (){
@@ -52,79 +55,46 @@ export default class SignUp extends React.Component {
     render(){
         return (
             <View style={styles.container}>
+                <View>
+                    <Image source = {logs} style ={styles.logos} resizeMode="contain"/>
+                </View>
+
                 <View style={styles.logoContainer}>
-                
-                    <Text style={styles.logo}>ItsYopa!</Text>
+                    <Text style={styles.logo}></Text>
                 </View>
                 <View style={styles.formView}>
-                    <Text style={styles.formHeading}>Create Your Account </Text>
-                    <View style={styles.inputView}>
-                        <TextInput
-                            style={styles.inputText}
-                            placeholder="Full Name..."
-                            placeholderTextColor="#9EABB9"
-                            onChangeText={text => this.setState({fullname:text})}/>
-                    </View>
-                    <View style={styles.inputView}>
-                        <TextInput
-                            style={styles.inputText}
-                            placeholder="Username..."
-                            placeholderTextColor="#9EABB9"
-                            onChangeText={text => this.setState({username:text})}/>
-                    </View>
-                    <View style={styles.inputView}>
-                        <TextInput
-                            style={styles.inputText}
-                            placeholder="Email..."
-                            placeholderTextColor="#9EABB9"
-                            onChangeText={text => this.setState({emailAddress:text})}/>
-                    </View>
-                    <View style={styles.inputView}>
-                        <TextInput
-                            style={styles.inputText}
-                            placeholder="Date of Birth..."
-                            placeholderTextColor="#9EABB9"
-                            onChangeText={text => this.setState({dob:text})}/>
-                    </View>
-                    <View style={styles.inputView}>
-                        <TextInput
-                            style={styles.inputText}
-                            placeholder="Choose Location..."
-                            placeholderTextColor="#9EABB9"
-                            onChangeText={text => this.setState({city:text})}/>
-                    </View>
-                    <View style={styles.inputView}>
-                        <TextInput
-                            style={styles.inputText}
-                            placeholder="Phone Number..."
-                            placeholderTextColor="#9EABB9"
-                            onChangeText={text => this.setState({phoneNumber:text})}/>
-                    </View>
-                    <View style={styles.inputView}>
+                    <Text style={styles.formHeading}>Almost Done </Text>
+                   
+                      <View style={styles.inputView}>
+                          <TextInput
+                              secureTextEntry
+                              style={styles.inputText}
+                              placeholder="Password..."
+                              placeholderTextColor="#9EABB9"
+                              onChangeText={text => this.setState({password:text})}/>
+                      </View>
+                      <View style={styles.inputView}>
+                          <TextInput
+                              secureTextEntry
+                              style={styles.inputText}
+                              placeholder="Confirm Password..."
+                              placeholderTextColor="#9EABB9"
+                              onChangeText={text => this.setState({password:text})}/>
+                      </View>
 
-                    <Picker selectedValue = {this.state.dummy} style={styles.inputText} onValueChange={value => this.setState({dummy:value})}>
-                                <Picker.Item label = "Fashion & Clothing" value = "A54F9E74-3AE0-4E65-2506-08DA6283048D" />
-                                <Picker.Item label = "Florist" value = "A54F9E74-3AE0-4E65-2506-08DA6283047D" />
-                                <Picker.Item label = "Cosmetics & Beauty" value = "A54F9E74-3AE0-4E65-2506-08DA6283058D" />
-                                <Picker.Item label = "Electronics" value = "A54F9E74-4AE0-4E65-2506-08DA6283058D" />
-            
-                        </Picker>
-                       
-                    </View>
-                    <View style={styles.inputView}>
-
-                        <Picker selectedValue = {this.state.gender} style={styles.inputText} onValueChange={value => this.setState({gender:value})}>
-                                <Picker.Item label = "Male" value = "Male" />
-                                <Picker.Item label = "Female  " value = "Female" />
-            
-                        </Picker>
-                    </View>
-                     
+                      {/*<View style={styles.inputView}>
+                      <CheckBox
+                            disabled={false}
+                            value={this.state.ToggleCheckBox}
+                            onValueChange={(newValue) => this.setState({ToggleCheckBox: newValue})}
+                        />
+                    </View>*/}
 
                     <TouchableOpacity style={styles.loginBtn}
-                    onPress = {() => this.props.navigation.navigate('Finish') }
+                    onPressIn = {() => alert("By Clicking sign up you agree to the terms and conditions") }
+                    onPress = {() => this.props.navigation.navigate('TabIndex')}
                     >
-                        <Text style={styles.loginText}>Next</Text>
+                        <Text style={styles.loginText}>Sign Up</Text>
                     </TouchableOpacity>
                     
                         <Text style={styles.loginText}>Have an account?</Text>
@@ -155,8 +125,7 @@ const styles = StyleSheet.create({
         borderRadius: wp('50%'),
         padding: wp('5%'),
         height: hp('11%'),
-        marginBottom: hp('3%'),
-        alignItems: 'center',
+        marginBottom: hp('3%')
     },
     formView:{
        

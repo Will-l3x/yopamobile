@@ -53,7 +53,7 @@ class Home extends Component {
                         scrollEventThrottle={16}
                     >
                         <View style={{ flex: 1, backgroundColor: 'white', paddingTop: 20 }}>
-                            <Text style={{ fontSize: 24, fontWeight: '700', paddingHorizontal: 20 }}>
+                            <Text style={{ fontSize: 24, fontWeight: '700', paddingHorizontal: 20, color:'#35CAAC' }}>
                                 What can we help you shop for?
                             </Text>
 
@@ -74,49 +74,49 @@ class Home extends Component {
                                 </ScrollView>
                             </View>
                             <View style={{ marginTop: 40, paddingHorizontal: 20 }}>
-                                <Text style={{ fontSize: 24, fontWeight: '700' }}>
+                                <Text style={{ fontSize: 24, fontWeight: '700', color:'#35CAAC' }}>
                                     Yopa's Trending
                                 </Text>
-                                <Text style={{ fontWeight: '100', marginTop: 10 }}>
+                                <Text style={{ fontWeight: '100', marginTop: 10, color:'#35CAAC' }}>
                                     A new selection of verified discounted offers
 
                                 </Text>
-                                <View style={{ width: width - 40, height: 200, marginTop: 20 }}>
+                                <View style={{ width: width - 40, height: 300, marginTop: 10 }}>
                                     <Image
                                         style={{ flex: 1, height: null, width: null, resizeMode: 'cover', borderRadius: 5, borderWidth: 1, borderColor: '#dddddd' }}
                                         source={require('../../../assets/home.jpg')}
                                     />
 
+                                    <Text  style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>Product Name</Text>
+                                    <Text style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>$99.99</Text>
+
                                 </View>
+
+                                <View style={{ width: width - 40, height: 300, marginTop: 10 }}>
+                                    <Image
+                                        style={{ flex: 1, height: null, width: null, resizeMode: 'cover', borderRadius: 5, borderWidth: 1, borderColor: '#dddddd' }}
+                                        source={require('../../../assets/home.jpg')}
+                                    />
+
+                                    <Text style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>Product Name</Text>
+                                    <Text style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>$99.99</Text>
+
+                                </View>
+
+                                <View style={{ width: width - 40, height: 300, marginTop: 10 }}>
+                                    <Image
+                                        style={{ flex: 1, height: null, width: null, resizeMode: 'cover', borderRadius: 5, borderWidth: 1, borderColor: '#dddddd' }}
+                                        source={require('../../../assets/home.jpg')}
+                                    />
+
+                                    <Text style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>Product Name</Text>
+                                    <Text style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>$99.99</Text>
+
+                                </View>
+                                
                             </View>
                         </View>
-                        <View style={{ marginTop: 40 }}>
-                            <Text style={{ fontSize: 24, fontWeight: '700', paddingHorizontal: 20 }}>
-                                Offers around your area
-                            </Text>
-                            <View style={{ paddingHorizontal: 20, marginTop: 20, flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
-                                <Card width={width}
-                                    name="The Cozy Place"
-                                    type="PRIVATE ROOM - 2 BEDS"
-                                    price={82}
-                                    rating={4}
-                                />
-                                <Card width={width}
-                                    name="The Cozy Place"
-                                    type="PRIVATE ROOM - 2 BEDS"
-                                    price={82}
-                                    rating={4}
-                                />
-                                <Card width={width}
-                                    name="The Cozy Place"
-                                    type="PRIVATE ROOM - 2 BEDS"
-                                    price={82}
-                                    rating={4}
-                                />
-
-
-                            </View>
-                        </View>
+                        
                     </ScrollView>
 
                 </View>

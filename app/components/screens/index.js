@@ -13,6 +13,7 @@ import Home from './Home';
 import Notifications from './Notifications';
 import Search from './Search';
 import Settings from './Settings';
+import Products from '../screenComponents/ProductList';
 
 
 
@@ -57,7 +58,7 @@ export default function TabIndex() {
               <Icon name="search" color={tintColor} size={24} />
             )
            }} 
-          name="Search" component={Search} />
+          name="Search" component={Products} />
           <Tab.Screen
              options={{
               tabBarLabel: 'Settings',

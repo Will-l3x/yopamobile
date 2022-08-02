@@ -10,6 +10,7 @@ import {DrawerActions} from "@react-navigation/native";
 import LogIn from './app/auth/login';
 import SignUp from './app/auth/signup';
 import TabIndex from './app/components/screens';
+import FinishSignUp from './app/auth/finishisignup';
 
 
 const Stack = createStackNavigator();
@@ -43,6 +44,15 @@ export default function App() {
                           headerLeft: null,
                       }}
                   />
+                   <Stack.Screen
+                      name="Finish"
+                      component={FinishSignUp}
+                      options={{
+                          headerShown: false,
+                          headerLeft: null,
+                      }}
+                  />
+            
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
