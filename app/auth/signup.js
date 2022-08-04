@@ -39,7 +39,7 @@ export default class SignUp extends React.Component {
         console.log(JSON.stringify(response.data));
         if (response.data.success == true){
             alert(response.data.message);
-            this.props.navigation.navigate('Login');
+            this.props.navigation.navigate('LogIn');
         }else{
            alert(response.data.message);
         }
@@ -137,7 +137,7 @@ export default class SignUp extends React.Component {
                     <TouchableOpacity style={styles.loginBtn}
                     onPress = {() => this.Register()}
                     >
-                        <Text style={styles.loginText}>Next</Text>
+                        <Text style={styles.loginText}>Sign Up</Text>
                     </TouchableOpacity>
                     
                         <Text style={styles.loginText}>Have an account?</Text>

@@ -9,6 +9,35 @@ export default class LogIn extends React.Component {
         email:"",
         password:""
     }
+
+    Login (){
+        var axios = require('axios');
+        var data = JSON.stringify({"email":this.state.email,"password":this.state.password});
+
+        var config = {
+        method: 'post',
+        url: 'https://itsyopaapi.herokuapp.com/api/login',
+        headers: { 
+            'Content-Type': 'application/json'
+        },
+        data : data
+        };
+
+        axios(config)
+        .then((response)=> {
+        console.log(JSON.stringify(response.data));
+        if (response.data.success == true){
+            alert(response.data.message);
+            this.props.navigation.navigate('TabIndex');
+        }else{
+            alert(response.data.message);
+        }
+        })
+        .catch(function (error) {
+        console.log(error);
+        });
+
+    }
     render(){
         return (
             <View style={styles.container}>
@@ -38,7 +67,7 @@ export default class LogIn extends React.Component {
                       </View>
 
                     <TouchableOpacity style={styles.loginBtn}
-                    onPress = {() => this.props.navigation.navigate('TabIndex') }
+                    onPress = {()=>{this.Login()} }
                     >
                         <Text style={styles.loginText}>LOGIN</Text>
                     </TouchableOpacity>
