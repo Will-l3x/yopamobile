@@ -35,8 +35,9 @@ class Products extends Component {
 
     componentDidMount(){
         this.__getProducts();
+        //this.__GetAll();
     }
-
+    
     __getProducts = async ()=> {
         var axios = require('axios');
 
@@ -58,6 +59,7 @@ class Products extends Component {
         })
         })
         .catch(function (error) {
+        
         console.log(error);
         });
 
@@ -83,3 +85,11 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     }
 });
+
+
+
+
+
+
+
+

@@ -13,22 +13,23 @@ export default class SignUp extends React.Component {
         city:"",
         phoneNumber:"",
         gender:"",
+        dob:"",
         userInterestsArray:['A54F9E74-3AE0-4E65-2506-08DA6283048D', "A54F9E74-3AE0-4E65-2506-08DA6283047D"],
-        roleNames:[],
-        dummy: '',
+        fullname:'',
+        interest: 'Clothing',
+        dummy:'',
     }
 
     Register (){
+       
         var axios = require('axios');
-        var data = JSON.stringify({"emailAddress":this.state.emailAddress,"password":this.state.password,"username":this.state.username,"city":this.state.city,"phoneNumber":this.state.phoneNumber,"gender":this.state.gender,"userInterestsArray":[this.state.userInterestsArray],"roleNames":[this.state.roleNames]});
+        var data = JSON.stringify({"username":this.state.username,"fullname":this.state.fullname,"email":this.state.emailAddress,"password":this.state.password,"dateofbirth":this.state.dob,"interest":this.state.interest,"city":this.state.city,"phonenumber":this.state.phoneNumber});
 
         var config = {
         method: 'post',
-        url: 'https://yopashopapi.azurewebsites.net/api/services/app/User/Register',
+        url: 'https://itsyopaapi.herokuapp.com/api/',
         headers: { 
-            'Content-Type': 'application/json', 
-            
-           
+            'Content-Type': 'application/json'
         },
         data : data
         };
@@ -36,17 +37,17 @@ export default class SignUp extends React.Component {
         axios(config)
         .then((response) =>{
         console.log(JSON.stringify(response.data));
-        if(response.data.success === true){
-            alert("Log In Succesfull")
-            this.props.navigation.navigate('TabIndex');
+        if (response.data.success == true){
+            alert(response.data.message);
+            this.props.navigation.navigate('Login');
         }else{
-            alert("Log In Failure")
-            this.props.navigation.navigate('SignUp');
+           alert(response.data.message);
         }
         })
         .catch(function (error) {
         console.log(error);
         });
+
 
     }
     render(){
@@ -58,13 +59,7 @@ export default class SignUp extends React.Component {
                 </View>
                 <View style={styles.formView}>
                     <Text style={styles.formHeading}>Create Your Account </Text>
-                    <View style={styles.inputView}>
-                        <TextInput
-                            style={styles.inputText}
-                            placeholder="Full Name..."
-                            placeholderTextColor="#9EABB9"
-                            onChangeText={text => this.setState({fullname:text})}/>
-                    </View>
+                   
                     <View style={styles.inputView}>
                         <TextInput
                             style={styles.inputText}
@@ -75,10 +70,18 @@ export default class SignUp extends React.Component {
                     <View style={styles.inputView}>
                         <TextInput
                             style={styles.inputText}
+                            placeholder="Full Name..."
+                            placeholderTextColor="#9EABB9"
+                            onChangeText={text => this.setState({fullname:text})}/>
+                    </View>
+                    <View style={styles.inputView}>
+                        <TextInput
+                            style={styles.inputText}
                             placeholder="Email..."
                             placeholderTextColor="#9EABB9"
                             onChangeText={text => this.setState({emailAddress:text})}/>
                     </View>
+
                     <View style={styles.inputView}>
                         <TextInput
                             style={styles.inputText}
@@ -86,6 +89,7 @@ export default class SignUp extends React.Component {
                             placeholderTextColor="#9EABB9"
                             onChangeText={text => this.setState({dob:text})}/>
                     </View>
+                   
                     <View style={styles.inputView}>
                         <TextInput
                             style={styles.inputText}
@@ -119,10 +123,19 @@ export default class SignUp extends React.Component {
             
                         </Picker>
                     </View>
+
+                    <View style={styles.inputView}>
+                          <TextInput
+                              secureTextEntry
+                              style={styles.inputText}
+                              placeholder="Password..."
+                              placeholderTextColor="#9EABB9"
+                              onChangeText={text => this.setState({password:text})}/>
+                      </View>
                      
 
                     <TouchableOpacity style={styles.loginBtn}
-                    onPress = {() => this.props.navigation.navigate('Finish') }
+                    onPress = {() => this.Register()}
                     >
                         <Text style={styles.loginText}>Next</Text>
                     </TouchableOpacity>

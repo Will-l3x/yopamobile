@@ -84,7 +84,7 @@ class Home extends Component {
                                 <View style={{ width: width - 40, height: 300, marginTop: 10 }}>
                                     <Image
                                         style={{ flex: 1, height: null, width: null, resizeMode: 'cover', borderRadius: 5, borderWidth: 1, borderColor: '#dddddd' }}
-                                        source={require('../../../assets/home.jpg')}
+                                        source={"https://yopastorage.blob.core.windows.net/shop-store/ProductImage-2022-07-24/20220724T122122273.jpg"}
                                     />
 
                                     <Text  style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>Product Name</Text>
@@ -95,7 +95,7 @@ class Home extends Component {
                                 <View style={{ width: width - 40, height: 300, marginTop: 10 }}>
                                     <Image
                                         style={{ flex: 1, height: null, width: null, resizeMode: 'cover', borderRadius: 5, borderWidth: 1, borderColor: '#dddddd' }}
-                                        source={require('../../../assets/home.jpg')}
+                                        source={"https://yopastorage.blob.core.windows.net/shop-store/ProductImage-2022-07-23/20220723T133647138.jpg"}
                                     />
 
                                     <Text style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>Product Name</Text>
@@ -106,7 +106,7 @@ class Home extends Component {
                                 <View style={{ width: width - 40, height: 300, marginTop: 10 }}>
                                     <Image
                                         style={{ flex: 1, height: null, width: null, resizeMode: 'cover', borderRadius: 5, borderWidth: 1, borderColor: '#dddddd' }}
-                                        source={require('../../../assets/home.jpg')}
+                                        source={"https://yopastorage.blob.core.windows.net/shop-store/ProductImage-2022-07-23/20220723T133233452.jpg"}
                                     />
 
                                     <Text style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>Product Name</Text>
