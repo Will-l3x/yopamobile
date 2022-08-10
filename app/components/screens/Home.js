@@ -9,7 +9,12 @@ import {
     StatusBar,
     ScrollView,
     Image,
-    Dimensions
+    Dimensions, 
+    TouchableOpacity,
+    Pressable,
+    Modal,
+    Alert,
+
 } from "react-native";
 import Icon from 'react-native-vector-icons/Ionicons'
 import Category from "../screenComponents/Category";
@@ -19,6 +24,14 @@ const { height, width } = Dimensions.get('window')
 
 class Home extends Component {
 
+    state = {
+        modalVisible: false
+      };
+    
+      setModalVisible = (visible) => {
+        this.setState({ modalVisible: visible });
+      }
+
     componentWillMount() {
         this.startHeaderHeight = 80
         if (Platform.OS == 'android') {
@@ -27,9 +40,43 @@ class Home extends Component {
     }
 
     render() {
-        return (
-            <SafeAreaView style={{ flex: 1 }}>
-                <View style={{ flex: 1 }}>
+        const { modalVisible } = this.state;
+                            return (
+                                <SafeAreaView style={{ flex: 1 }}>
+                                    <View style={{ flex: 1 }}>
+                                    <View style={styles.centeredView}>
+                            <Modal
+                            animationType="slide"
+                            transparent={true}
+                            visible={modalVisible}
+                            onRequestClose={() => {
+                                Alert.alert("Modal has been closed.");
+                                this.setModalVisible(!modalVisible);
+                            }}
+                            >
+                            <View style={styles.centeredView}>
+                                <View style={styles.modalView}>
+                                <Text style={styles.modalText}>Suppliers::::</Text>
+                                <Text style={styles.modalText}>Supplier 1</Text>
+                                <Text style={styles.modalText}>Supplier 2</Text>
+                                <Text style={styles.modalText}>Suppliers 3</Text>
+                                <Pressable
+                                    style={[styles.button, styles.buttonClose]}
+                                    onPress={() => this.setModalVisible(!modalVisible)}
+                                >
+                                    <Text style={styles.textStyle}>Contact Seller</Text>
+                                </Pressable>
+                                <Pressable
+                                    style={[styles.button, styles.buttonClose]}
+                                    onPress={() => this.setModalVisible(!modalVisible)}
+                                >
+                                    <Text style={styles.textStyle}>Go Back</Text>
+                                </Pressable>
+                                </View>
+                            </View>
+                            </Modal>
+                            
+                        </View>
                     <View style={{ height: this.startHeaderHeight, backgroundColor: 'white', borderBottomWidth: 1, borderBottomColor: '#dddddd' }}>
                         <View style={{
                             flexDirection: 'row', padding: 10,
@@ -81,38 +128,84 @@ class Home extends Component {
                                     A new selection of verified discounted offers
 
                                 </Text>
+                                <TouchableOpacity  onPress={() => this.setModalVisible(true)}>
+                                <View style={{ width: width - 40, height: 300, marginTop: 10 }}>
+                                    
+                                    <Image
+                                        style={{ flex: 1, height: null, width: null, resizeMode: 'cover', borderRadius: 5, borderWidth: 1, borderColor: '#dddddd' }}
+                                        source={{uri: "https://yopastorage.blob.core.windows.net/shop-store/ProductImage-2022-07-24/20220724T122122273.jpg",cache: 'only-if-cached'}}
+                                    />
+                                   
+
+                                    <Text  style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>Nail Salon Promo</Text>
+                                    <Text style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>R250.00</Text>
+
+                                </View>
+                                </TouchableOpacity>
+                                
+                                <TouchableOpacity  onPress={() => this.setModalVisible(true)}>
                                 <View style={{ width: width - 40, height: 300, marginTop: 10 }}>
                                     <Image
                                         style={{ flex: 1, height: null, width: null, resizeMode: 'cover', borderRadius: 5, borderWidth: 1, borderColor: '#dddddd' }}
-                                        source={"https://yopastorage.blob.core.windows.net/shop-store/ProductImage-2022-07-24/20220724T122122273.jpg"}
+                                        source={{uri: "https://yopastorage.blob.core.windows.net/shop-store/ProductImage-2022-07-23/20220723T133647138.jpg", cache: 'only-if-cached'}}
                                     />
 
-                                    <Text  style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>Product Name</Text>
-                                    <Text style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>$99.99</Text>
+                                    <Text style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>GLUTA PRIME PLUS</Text>
+                                    <Text style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>R400.00</Text>
 
                                 </View>
+                                </TouchableOpacity>
+                                <TouchableOpacity  onPress={() => this.setModalVisible(true)}>
+                                <View style={{ width: width - 40, height: 300, marginTop: 10 }}>
+                                    
+                                    <Image
+                                        style={{ flex: 1, height: null, width: null, resizeMode: 'cover', borderRadius: 5, borderWidth: 1, borderColor: '#dddddd' }}
+                                        source={{uri:"https://yopastorage.blob.core.windows.net/shop-store/ProductImage-2022-07-23/20220723T133233452.jpg", cache:'only-if-cached'}}
+                                    />
 
+                                    <Text style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>FROZEN COLLAGEN</Text>
+                                    <Text style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>R300.006</Text>
+
+                                </View>
+                                </TouchableOpacity>
+                                <TouchableOpacity  onPress={() => this.setModalVisible(true)}>
                                 <View style={{ width: width - 40, height: 300, marginTop: 10 }}>
                                     <Image
                                         style={{ flex: 1, height: null, width: null, resizeMode: 'cover', borderRadius: 5, borderWidth: 1, borderColor: '#dddddd' }}
-                                        source={"https://yopastorage.blob.core.windows.net/shop-store/ProductImage-2022-07-23/20220723T133647138.jpg"}
+                                        source={{uri:"https://yopastorage.blob.core.windows.net/shop-store/ProductImage-2022-07-23/20220723T132153040.jpg", cache:'only-if-cached'}}
                                     />
 
-                                    <Text style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>Product Name</Text>
-                                    <Text style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>$99.99</Text>
+                                    <Text style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>Miracle Pure White</Text>
+                                    <Text style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>R900.00</Text>
 
                                 </View>
-
+                                </TouchableOpacity>
+                                <TouchableOpacity  onPress={() => this.setModalVisible(true)}>
                                 <View style={{ width: width - 40, height: 300, marginTop: 10 }}>
                                     <Image
                                         style={{ flex: 1, height: null, width: null, resizeMode: 'cover', borderRadius: 5, borderWidth: 1, borderColor: '#dddddd' }}
-                                        source={"https://yopastorage.blob.core.windows.net/shop-store/ProductImage-2022-07-23/20220723T133233452.jpg"}
+                                        source={{uri:"https://yopastorage.blob.core.windows.net/shop-store/ProductImage-2022-07-20/20220720T095829969.jpg", cache:'only-if-cached'}}
                                     />
 
-                                    <Text style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>Product Name</Text>
-                                    <Text style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>$99.99</Text>
+                                    <Text style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>Lipstick</Text>
+                                    <Text style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>R10.00</Text>
 
                                 </View>
+                                </TouchableOpacity>
+                                <TouchableOpacity  onPress={() => this.setModalVisible(true)}>
+                                <View style={{ width: width - 40, height: 300, marginTop: 10 }}>
+                                    <Image
+                                        style={{ flex: 1, height: null, width: null, resizeMode: 'cover', borderRadius: 5, borderWidth: 1, borderColor: '#dddddd' }}
+                                        source={{uri:"https://yopastorage.blob.core.windows.net/shop-store/ProductImage-2022-07-21/20220721T112526595.png", cache:'only-if-cached'}}
+                                    />
+
+                                    <Text style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>Cream</Text>
+                                    <Text style={{ fontWeight: 'bold', marginTop: 10, color:'#35CAAC' }}>R90.00</Text>
+
+                                </View>
+                                </TouchableOpacity>
+                                
+                            
                                 
                             </View>
                         </View>
@@ -131,5 +224,46 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center'
-    }
+    },
+    centeredView: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: 22
+      },
+      modalView: {
+        margin: 20,
+        backgroundColor: "white",
+        borderRadius: 20,
+        padding: 35,
+        alignItems: "center",
+        shadowColor: "#000",
+        shadowOffset: {
+          width: 0,
+          height: 2
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 4,
+        elevation: 5
+      },
+      button: {
+        borderRadius: 20,
+        padding: 10,
+        elevation: 2
+      },
+      buttonOpen: {
+        backgroundColor: "#F194FF",
+      },
+      buttonClose: {
+        backgroundColor: "#2196F3",
+      },
+      textStyle: {
+        color: "white",
+        fontWeight: "bold",
+        textAlign: "center"
+      },
+      modalText: {
+        marginBottom: 15,
+        textAlign: "center"
+      }
 });

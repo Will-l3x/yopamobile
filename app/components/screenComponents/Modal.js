@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Alert, Modal, StyleSheet, Text, Pressable, View } from "react-native";
 
-class Notifications extends Component {
+class Modal extends Component {
   state = {
     modalVisible: false
   };
@@ -90,4 +90,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Notifications;
+export default Modal;

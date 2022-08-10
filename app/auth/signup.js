@@ -132,6 +132,15 @@ export default class SignUp extends React.Component {
                               placeholderTextColor="#9EABB9"
                               onChangeText={text => this.setState({password:text})}/>
                       </View>
+
+                      <View style={styles.inputView}>
+                          <TextInput
+                              secureTextEntry
+                              style={styles.inputText}
+                              placeholder="Confirm Password..."
+                              placeholderTextColor="#9EABB9"
+                              />
+                      </View>
                      
 
                     <TouchableOpacity style={styles.loginBtn}
