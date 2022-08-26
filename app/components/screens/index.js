@@ -3,7 +3,7 @@ import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
+import { createStackNavigator } from '@react-navigation/stack';
 import { MaterialIcons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
@@ -14,14 +14,32 @@ import Notifications from './Notifications';
 import Search from './Search';
 import Settings from './Settings';
 import Products from '../screenComponents/ProductList';
+import Category from '../screenComponents/Category';
 
 
 
 const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
+
 
 export default function TabIndex() {
+  return (
+    <NavigationContainer independent={true}>
+      <Stack.Navigator>
+        <Stack.Screen
+          name="TabIndexx"
+          component={TabIndexx}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen name="Web" component={Category} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
+
+function TabIndexx() {
     return (
-      <NavigationContainer independent={true}>
+      
         <Tab.Navigator initialRouteName="Home"
           activeColor="#35CAAC"
           inactiveColor="#4a4a4a"
@@ -70,6 +88,7 @@ export default function TabIndex() {
 
             name="Settings" component={Settings} />
         </Tab.Navigator>
-      </NavigationContainer>
+        
+      
     );
   }

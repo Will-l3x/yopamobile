@@ -3,22 +3,42 @@ import {
     View,
     Text,
     StyleSheet,
-    Image
+    Image,
+    Modal,
 } from "react-native";
+import {WebView} from 'react-native-webview';
 
-class Category extends Component {
+class Category extends Component { 
+    constructor(props){
+        super(props)
+        this.state = {
+            modalVisible: true
+          };
+    }
+    
+    
+      setModalVisible = (visible) => {
+        this.setState({ modalVisible: visible });
+      }
     render() {
+        const { modalVisible } = this.state;
         return (
-            <View style={{ height: 130, width: 130, marginLeft: 20, borderWidth: 0.5, borderColor: '#dddddd' }}>
-                <View style={{ flex: 2 }}>
-                    <Image source={this.props.imageUri}
-                        style={{ flex: 1, width: null, height: null, resizeMode: 'cover' }}
-                    />
-                </View>
-                <View style={{ flex: 1, paddingLeft: 10, paddingTop: 10 }}>
-                    <Text>{this.props.name}</Text>
-                </View>
-            </View>
+            <View style={styles.centeredView}>
+                            <Modal
+                            animationType="slide"
+                            transparent={true}
+                            visible={modalVisible}
+                            onRequestClose={() => {
+                                
+                                this.setModalVisible(!modalVisible);
+                            }}
+                            >
+                                <View style={{flex: 1}}>
+                                    <WebView source={{uri: this.props.Weburi}} />
+                                </View>
+                            </Modal>
+                            
+                        </View>
         );
     }
 }

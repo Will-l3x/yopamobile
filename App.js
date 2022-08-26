@@ -11,6 +11,7 @@ import LogIn from './app/auth/login';
 import SignUp from './app/auth/signup';
 import TabIndex from './app/components/screens';
 import FinishSignUp from './app/auth/finishisignup';
+import Category from './app/components/screenComponents/Category';
 
 
 const Stack = createStackNavigator();
@@ -47,6 +48,14 @@ export default function App() {
                    <Stack.Screen
                       name="Finish"
                       component={FinishSignUp}
+                      options={{
+                          headerShown: false,
+                          headerLeft: null,
+                      }}
+                  />
+                  <Stack.Screen
+                      name="Web"
+                      component={Category}
                       options={{
                           headerShown: false,
                           headerLeft: null,
