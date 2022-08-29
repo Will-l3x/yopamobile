@@ -34,6 +34,7 @@ class Settings extends Component {
                 <Icon name="right" size={20} style={{  paddingLeft: 30 }}  />
             </View>
             </TouchableOpacity>
+            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Coming')}}>
             <View style={{flexDirection:'row', justifyContent: 'space-between',  borderWidth:2,
                  borderColor: '#DCDEDD', height: 75}}>
 
@@ -41,6 +42,8 @@ class Settings extends Component {
                 <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textDecorationLine:'underline', textDecorationStyle:'solid' }}>Edit Profile</Text>
                 <Icon name="right" size={20} style={{  paddingLeft: 30 }}  />
             </View>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Coming')}}>
             <View style={{flexDirection:'row', justifyContent: 'space-between',  borderWidth:2,
                  borderColor: '#DCDEDD',height: 75}}>
 
@@ -48,6 +51,7 @@ class Settings extends Component {
                 <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textDecorationLine:'underline', textDecorationStyle:'solid' }}>Edit Profile</Text>
                 <Icon name="right" size={20} style={{  paddingLeft: 30 }}  />
             </View>
+            </TouchableOpacity>
             </View>
         )
     }

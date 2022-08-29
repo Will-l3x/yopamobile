@@ -19,13 +19,13 @@ class Notifications extends Component {
           transparent={true}
           visible={modalVisible}
           onRequestClose={() => {
-            Alert.alert("Modal has been closed.");
+          
             this.setModalVisible(!modalVisible);
           }}
         >
           <View style={styles.centeredView}>
             <View style={styles.modalView}>
-              <Text style={styles.modalText}>Hello World!</Text>
+              <Text style={styles.modalText}>Coming Soon</Text>
               <Pressable
                 style={[styles.button, styles.buttonClose]}
                 onPress={() => this.setModalVisible(!modalVisible)}
@@ -39,7 +39,7 @@ class Notifications extends Component {
           style={[styles.button, styles.buttonOpen]}
           onPress={() => this.setModalVisible(true)}
         >
-          <Text style={styles.textStyle}>Show Modal</Text>
+          <Text style={styles.textStyle}>Coming Soon</Text>
         </Pressable>
       </View>
     );
