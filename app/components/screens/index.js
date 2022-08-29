@@ -17,6 +17,10 @@ import Products from '../screenComponents/ProductList';
 import Category from '../screenComponents/Category';
 
 
+import Interest from '../screenComponents/Interest';
+import ComingSoon from '../screenComponents/ComingSoon';
+
+
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -32,6 +36,8 @@ export default function TabIndex() {
           options={{ headerShown: false }}
         />
         <Stack.Screen name="Web" component={Category} />
+        <Stack.Screen name="choice" component={Interest}/>
+        <Stack.Screen name="Coming" component={ComingSoon}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
@@ -68,15 +74,7 @@ function TabIndexx() {
             )
            }} 
           name="Notifications" component={Notifications} />
-          <Tab.Screen 
-           options={{
-            tabBarLabel: 'Search',
-            title: 'Search',
-            tabBarIcon: ({ tintColor }) => (
-              <Icon name="search" color={tintColor} size={24} />
-            )
-           }} 
-          name="Search" component={Products} />
+          
           <Tab.Screen
              options={{
               tabBarLabel: 'Settings',

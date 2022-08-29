@@ -11,34 +11,20 @@ import {WebView} from 'react-native-webview';
 class Category extends Component { 
     constructor(props){
         super(props)
-        this.state = {
-            modalVisible: true
-          };
+       
     }
     
     
-      setModalVisible = (visible) => {
-        this.setState({ modalVisible: visible });
-      }
+     
     render() {
-        const { modalVisible } = this.state;
+       const {Weburi} = this.props.route.params;
         return (
-            <View style={styles.centeredView}>
-                            <Modal
-                            animationType="slide"
-                            transparent={true}
-                            visible={modalVisible}
-                            onRequestClose={() => {
-                                
-                                this.setModalVisible(!modalVisible);
-                            }}
-                            >
-                                <View style={{flex: 1}}>
-                                    <WebView source={{uri: this.props.Weburi}} />
-                                </View>
-                            </Modal>
-                            
-                        </View>
+            <WebView
+            source={{
+              uri: Weburi
+            }}
+            style={{ marginTop: 20 }}
+          />
         );
     }
 }
@@ -49,5 +35,11 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center'
-    }
+    },
+    centeredView: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: 22
+      },
 });

@@ -1,39 +1,67 @@
-import { View, Text, Button } from 'react-native'
+import { View, Text, Button, StyleSheet, TouchableOpacity } from 'react-native'
 import React, { Component } from 'react'
+import Icon from 'react-native-vector-icons/AntDesign'
 
 
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
 
+class Settings extends Component {
+    constructor(props){
+        super(props);
 
-function HomeScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Button
-        onPress={() => navigation.navigate('Notifications')}
-        title="Go to notifications"
-      />
-    </View>
-  );
-}
+        this.state = {
 
-function NotificationsScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Button onPress={() => navigation.goBack()} title="Go back home" />
-    </View>
-  );
-}
+        }
+    }
 
-const Drawer = createDrawerNavigator();
+    render(){
+        return(
+            <View styles={styles.container}>
+            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('choice')}}>
+            <View style={{flexDirection:'row', justifyContent: 'space-between',  borderWidth:2,
+                 borderColor: '#DCDEDD',height: 75}}>
 
-export default function Settings() {
-  return (
-    <NavigationContainer independent={true}>
-      <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen name="Home" component={HomeScreen} />
-        <Drawer.Screen name="Notifications" component={NotificationsScreen} />
-      </Drawer.Navigator>
-    </NavigationContainer>
-  );
-}
+                <Icon name="hearto" size={20} style={{  paddingLeft: 30 }}  />
+                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textDecorationLine:'underline', textDecorationStyle:'solid' }}>My Interests</Text>
+                <Icon name="right" size={20} style={{  paddingLeft: 30 }}  />
+            </View>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Coming')}}>
+            <View style={{flexDirection:'row', justifyContent: 'space-between',  borderWidth:2,
+                 borderColor: '#DCDEDD',height: 75}}>
+
+                <Icon name="pushpin" size={20} style={{  paddingLeft: 30 }}  />
+                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textDecorationLine:'underline', textDecorationStyle:'solid' }}>Location</Text>
+                <Icon name="right" size={20} style={{  paddingLeft: 30 }}  />
+            </View>
+            </TouchableOpacity>
+            <View style={{flexDirection:'row', justifyContent: 'space-between',  borderWidth:2,
+                 borderColor: '#DCDEDD', height: 75}}>
+
+                <Icon name="user" size={20} style={{  paddingLeft: 30 }}  />
+                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textDecorationLine:'underline', textDecorationStyle:'solid' }}>Edit Profile</Text>
+                <Icon name="right" size={20} style={{  paddingLeft: 30 }}  />
+            </View>
+            <View style={{flexDirection:'row', justifyContent: 'space-between',  borderWidth:2,
+                 borderColor: '#DCDEDD',height: 75}}>
+
+                <Icon name="user" size={20} style={{  paddingLeft: 30 }}  />
+                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textDecorationLine:'underline', textDecorationStyle:'solid' }}>Edit Profile</Text>
+                <Icon name="right" size={20} style={{  paddingLeft: 30 }}  />
+            </View>
+            </View>
+        )
+    }
+}   
+
+export default Settings
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: 'white',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 20
+    },
+    
+});

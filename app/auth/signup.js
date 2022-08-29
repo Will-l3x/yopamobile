@@ -172,8 +172,9 @@ const styles = StyleSheet.create({
         marginBottom: hp('2%'),
         justifyContent:"center",
         padding:wp('2%'),
-        borderWidth:2,
-        borderColor: '#DCDEDD',
+        borderBottomColor: '#DCDEDD',
+        borderBottomWidth: 2,
+        marginBottom: 30,
     },
     inputText:{
         height:hp('5%'),

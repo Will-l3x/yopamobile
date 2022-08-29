@@ -27,7 +27,7 @@ export default class LogIn extends React.Component {
         .then((response)=> {
         console.log(JSON.stringify(response.data));
         if (response.data.success == true){
-            alert(response.data.message);
+            alert('Log In Successful');
             this.props.navigation.navigate('TabIndex');
         }else{
             alert(response.data.message);
@@ -136,8 +136,12 @@ const styles = StyleSheet.create({
         marginBottom: hp('2%'),
         justifyContent:"center",
         padding:wp('2%'),
-        borderWidth:2,
-        borderColor: '#DCDEDD',
+        borderBottomColor: '#DCDEDD',
+        borderBottomWidth: 2,
+        marginBottom: 30,
+       // borderWidth:2,
+        //borderColor: '',
+        
     },
     inputText:{
         height:hp('5%'),

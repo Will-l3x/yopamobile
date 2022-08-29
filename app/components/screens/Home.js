@@ -99,7 +99,7 @@ class Home extends Component {
                             </View>
                             <View style={{ marginTop: 40, paddingHorizontal: 20 }}>
                                 <Text style={{ fontSize: 24, fontWeight: '700', color:'black' }}>
-                                    Yopa's Trending
+                                    Your Feed
                                 </Text>
                                 <Text style={{ fontWeight: '100', marginTop: 10, color:'black' }}>
                                     A new selection of verified discounted offers
