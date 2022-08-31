@@ -43,12 +43,12 @@ class Settings extends Component {
                 <Icon name="right" size={20} style={{  paddingLeft: 30 }}  />
             </View>
             </TouchableOpacity>
-            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Coming')}}>
+            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('logout')}}>
             <View style={{flexDirection:'row', justifyContent: 'space-between',  borderWidth:2,
                  borderColor: '#DCDEDD',height: 75}}>
 
                 <Icon name="user" size={20} style={{  paddingLeft: 30 }}  />
-                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textDecorationLine:'underline', textDecorationStyle:'solid' }}>Edit Profile</Text>
+                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textDecorationLine:'underline', textDecorationStyle:'solid' }}>Log Out</Text>
                 <Icon name="right" size={20} style={{  paddingLeft: 30 }}  />
             </View>
             </TouchableOpacity>

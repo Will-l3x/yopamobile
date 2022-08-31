@@ -14,7 +14,7 @@ class ComingSoon extends Component{
 
     render(){
         return(
-            <View style={{flex: 1,justifyContent: 'center', paddingStart: 100, backgroundColor: '#FF7F7F'}}>
+            <View style={{flex: 1,justifyContent: 'center', paddingStart: 100, backgroundColor: '#35CAAC'}}>
                 <Text style={{fontSize:30, fontWeight: 'bold', marginTop: 10, color:'black', textAlign: 'center', color:'white' }}>Coming Soon</Text>
             </View>
         )

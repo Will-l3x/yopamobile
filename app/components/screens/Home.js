@@ -175,14 +175,7 @@ class Home extends Component {
                                             </View>
                                            
                                     </View>
-                                    <View style={styles.ContactSeller}>
-                                                
-                                                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textAlign:'left', paddingTop: 1}}>My Shop1</Text>
-                                                
-                                                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textAlign:'left', paddingTop: 10}}>some description</Text>
-
-                                                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textAlign:'left', paddingTop: 15}}></Text>
-                                            </View>
+                                    
                                 </TouchableOpacity>
 
                                 <View style={{ width: width - 40, height: 300, marginTop: 10 }}>
@@ -252,14 +245,7 @@ class Home extends Component {
                                             </View>
                                            
                                     </View>
-                                    <View style={styles.ContactSeller}>
-                                                
-                                                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textAlign:'left', paddingTop: 1}}>Bossladyskinpage2</Text>
-                                                
-                                                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textAlign:'left', paddingTop: 10}}>We provide beauty perfection across the world. We work closely with dermatologist and specialist laboratories to formulate our safe and functional skincare range. Our main principal at Boss Lady Beauty is to fulfil the skins & hairs needs, in return all we ask is for you to give your confidence the care it deserves</Text>
-
-                                                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textAlign:'left', paddingTop: 15}}></Text>
-                                            </View>
+                                    
 
                                             <View style={{ width: width - 40, height: 300, marginTop: 10 }}>
                                 
@@ -327,14 +313,7 @@ class Home extends Component {
                                         </View>
                                        
                                 </View>
-                                <View style={styles.ContactSeller}>
-                                            
-                                            <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textAlign:'left', paddingTop: 1}}>bossladyskinpage2</Text>
-                                            
-                                            <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textAlign:'left', paddingTop: 10}}>We provide beauty perfection across the world. We work closely with dermatologist and specialist laboratories to formulate our safe and functional skincare range. Our main principal at Boss Lady Beauty is to fulfil the skins & hairs needs, in return all we ask is for you to give your confidence the care it deserves.</Text>
-
-                                            <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textAlign:'left', paddingTop: 15}}></Text>
-                                        </View>
+                                
                             
 
                                         <View style={{ width: width - 40, height: 300, marginTop: 10 }}>
@@ -404,15 +383,7 @@ class Home extends Component {
                                         </View>
                                        
                                 </View>
-                                <View style={styles.ContactSeller}>
-                                            
-                                            <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textAlign:'left', paddingTop: 1}}>Bossladyskinpage2</Text>
-                                            
-                                            <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textAlign:'left', paddingTop: 10}}>We provide beauty perfection across the world. We work closely with dermatologist and specialist laboratories to formulate our safe and functional skincare range. Our main principal at Boss Lady Beauty is to fulfil the skins & hairs needs, in return all we ask is for you to give your confidence the care it deserves.</Text>
-
-                                            <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textAlign:'left', paddingTop: 15}}></Text>
-                                        </View>
-
+                               
 
                                         <View style={{ width: width - 40, height: 300, marginTop: 10 }}>
                                 
@@ -481,14 +452,7 @@ class Home extends Component {
                                         </View>
                                        
                                 </View>
-                                <View style={styles.ContactSeller}>
-                                            
-                                            <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textAlign:'left', paddingTop: 1}}>Bossladyskinpage2</Text>
-                                            
-                                            <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textAlign:'left', paddingTop: 10}}>We provide beauty perfection across the world. We work closely with dermatologist and specialist laboratories to formulate our safe and functional skincare range. Our main principal at Boss Lady Beauty is to fulfil the skins & hairs needs, in return all we ask is for you to give your confidence the care it deserves.</Text>
-
-                                            <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textAlign:'left', paddingTop: 15}}></Text>
-                                        </View>
+                               
                             
 
                                         <View style={{ width: width - 40, height: 300, marginTop: 10 }}>

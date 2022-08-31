@@ -39,7 +39,7 @@ class Notifications extends Component {
           style={[styles.button, styles.buttonOpen]}
           onPress={() => this.setModalVisible(true)}
         >
-          <Text style={styles.textStyle}>Coming Soon</Text>
+          <Text style={styles.textStyle}>Watch this space for new features and updates</Text>
         </Pressable>
       </View>
     );

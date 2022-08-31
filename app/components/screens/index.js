@@ -19,6 +19,7 @@ import Category from '../screenComponents/Category';
 
 import Interest from '../screenComponents/Interest';
 import ComingSoon from '../screenComponents/ComingSoon';
+import LogIn from '../../auth/login';
 
 
 
@@ -38,6 +39,7 @@ export default function TabIndex() {
         <Stack.Screen name="Web" component={Category} />
         <Stack.Screen name="choice" component={Interest}/>
         <Stack.Screen name="Coming" component={ComingSoon}/>
+        <Stack.Screen name ='logout' component={LogIn}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
