@@ -1,5 +1,6 @@
 import { View, Text, Button, StyleSheet, TouchableOpacity } from 'react-native'
 import React, { Component } from 'react'
+import  { BackHandler } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign'
 
 
@@ -25,7 +26,7 @@ class Settings extends Component {
                 <Icon name="right" size={20} style={{  paddingLeft: 30 }}  />
             </View>
             </TouchableOpacity>
-            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Coming')}}>
+            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('location')}}>
             <View style={{flexDirection:'row', justifyContent: 'space-between',  borderWidth:2,
                  borderColor: '#DCDEDD',height: 75}}>
 
@@ -34,7 +35,7 @@ class Settings extends Component {
                 <Icon name="right" size={20} style={{  paddingLeft: 30 }}  />
             </View>
             </TouchableOpacity>
-            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Coming')}}>
+            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('update')}}>
             <View style={{flexDirection:'row', justifyContent: 'space-between',  borderWidth:2,
                  borderColor: '#DCDEDD', height: 75}}>
 
@@ -43,7 +44,7 @@ class Settings extends Component {
                 <Icon name="right" size={20} style={{  paddingLeft: 30 }}  />
             </View>
             </TouchableOpacity>
-            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('logout')}}>
+            <TouchableOpacity onPress={()=>{BackHandler.exitApp()}}>
             <View style={{flexDirection:'row', justifyContent: 'space-between',  borderWidth:2,
                  borderColor: '#DCDEDD',height: 75}}>
 
