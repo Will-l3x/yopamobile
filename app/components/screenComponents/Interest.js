@@ -4,16 +4,17 @@ import {
   View,
   StyleSheet,
   FlatList,
-  CheckBox,
+ 
   Button,
   Modal,
 } from 'react-native';
+//import CheckBox from '@react-native-community/checkbox';
 import Constants from 'expo-constants';
 
 
 
 // or any pure javascript modules available in npm
-import { Card } from 'react-native-paper';
+import { Card, Checkbox } from 'react-native-paper';
 
 const data = [
   { id: 1, txt: 'Clothes & Fashion', isChecked: false },
@@ -58,7 +59,7 @@ export default class Interest extends Component {
                   flex: 1,
                   justifyContent: 'space-between',
                 }}>
-                <CheckBox
+                <Checkbox
                   value={item.isChecked}
                   onChange={() => {
                     this.handleChange(item.id);

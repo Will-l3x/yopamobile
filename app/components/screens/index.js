@@ -40,7 +40,7 @@ export default function TabIndex() {
           options={{ headerShown: false }}
         />
         <Stack.Screen name="Web" component={Category} />
-        <Stack.Screen name="choice" component={Interest}/>
+        <Stack.Screen name="Interest" component={Interest}/>
         <Stack.Screen name="Coming" component={ComingSoon}/>
         <Stack.Screen name="location" component={Location}/>
         <Stack.Screen name="update" component={Update}/>

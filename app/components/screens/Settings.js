@@ -17,7 +17,7 @@ class Settings extends Component {
     render(){
         return(
             <View styles={styles.container}>
-            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('choice')}}>
+            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Interest')}}>
             <View style={{flexDirection:'row', justifyContent: 'space-between',  borderWidth:2,
                  borderColor: '#DCDEDD',height: 75}}>
 

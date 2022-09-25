@@ -28,10 +28,13 @@ import {WebView} from 'react-native-webview';
 const { height, width } = Dimensions.get('window')
 
 class Homes extends Component {
-
-    state = {
-        modalVisible: false
-      };
+    constructor(props){
+        super(props);
+        this. state = {
+            modalVisible: false
+          };
+    }
+   
     
       setModalVisible = (visible) => {
         this.setState({ modalVisible: visible });
@@ -219,7 +222,7 @@ class Home extends Component{
                     data={this.state.dataSource}
                     renderItem={({item, index})=>{
                         return(
-                            <Homes item={item} index={index} parentFlatList={this}/>
+                            <Homes item={item} index={index} parentFlatList={this} navigation={this.props.navigation}/>
                         )
                     }}
                     keyExtractor={({$id}, index)=>$id.toString()}
