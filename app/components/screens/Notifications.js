@@ -42,10 +42,10 @@ class Notifications extends Component {
             </View>
 
             <View style={{flexDirection:'row', justifyContent: 'space-between',  borderWidth:2,
-                 borderColor: '#DCDEDD', height: 75, width:350}}>
+                 borderColor: '#DCDEDD', height: 75, width:360}}>
 
                 <Icon name="exclamation" size={20}   />
-                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textDecorationStyle:'solid' }}>- Community features coming soon</Text>
+                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textDecorationStyle:'solid', textAlign: "justify" }}>- Community features coming soon</Text>
                 
             </View>
       </View>
