@@ -35,15 +35,17 @@ export default class Interest extends Component {
     };
     this.storeData = this.storeData.bind(this);
     this.getData = this.getData.bind(this);
+    this.clearAll = this.clearAll.bind(this);
   }
 
   componentDidMount(){
     this.getData();
+    //this.clearAll();
   }
 
    storeData = async () => {
     try {
-      await AsyncStorage.setItem('Choices', this.state.products)
+      await AsyncStorage.setItem('Choices', JSON.stringify(this.state.products))
     } catch (e) {
       // saving error
     }
@@ -55,8 +57,9 @@ getData = async () => {
     const value = await AsyncStorage.getItem('Choices')
     if(value !== null) {
       alert("Loading your selections")
+      console.log(JSON.parse(value))
       this.setState({
-        products: value
+        products: JSON.parse(value)
       })
     }else{
       alert("No previous choice stored please select")
@@ -65,6 +68,16 @@ getData = async () => {
     // error reading value
     console.log(e)
   }
+}
+
+clearAll = async () => {
+  try {
+    await AsyncStorage.clear()
+  } catch(e) {
+    // clear error
+  }
+
+  console.log('Done.')
 }
 
 
