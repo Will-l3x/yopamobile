@@ -17,35 +17,43 @@ class Notifications extends Component {
       <View style={styles.container}>
         
        
-            <View style={{flexDirection:'row', justifyContent: 'space-between',  borderWidth:2,
-                 borderColor: '#DCDEDD', height: 75}}>
+            <View style={{flexDirection:'row',   borderWidth:2, borderLeftWidth:0, borderRightWidth:0, borderTopWidth: 0,
+                 borderColor: '#DCDEDD', height: 80, width: 360}}>
 
-                <Icon name="exclamation" size={20}  />
-                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black',  textDecorationStyle:'solid' }}>- Welcome to YoPA Early Birds Version</Text>
+                <Icon name="exclamationcircle" size={30} style={{paddingTop: 6}}   />
+                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black',  textDecorationStyle:'solid',paddingLeft:10 }}> Welcome to YoPA Early Birds Version</Text>
                 
             </View>
 
-            <View style={{flexDirection:'row', justifyContent: 'space-between',  borderWidth:2,
-                 borderColor: '#DCDEDD', height: 75}}>
+            <View style={{flexDirection:'row',  borderWidth:2, borderLeftWidth:0, borderRightWidth: 0,
+                 borderColor: '#DCDEDD', height: 90, width:360}}>
 
-                <Icon name="exclamation" size={20}   />
-                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black',  textDecorationStyle:'solid' }}>- You can now add and save your interests</Text>
+                <Icon name="exclamationcircle" size={30} style={{paddingTop: 6}}   />
+                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black',  textDecorationStyle:'solid', paddingLeft:10 }}> You can now add and save your interests</Text>
                 
             </View>
 
-            <View style={{flexDirection:'row', justifyContent: 'space-between',  borderWidth:2,
-                 borderColor: '#DCDEDD', height: 75}}>
+            <View style={{flexDirection:'row',  borderWidth:2, borderLeftWidth: 0, borderRightWidth: 0,
+                 borderColor: '#DCDEDD', height: 90, width:360}}>
 
-                <Icon name="exclamation" size={20}  />
-                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textDecorationStyle:'solid' }}>- You can scroll and view your main feed to see current listings</Text>
+                <Icon name="exclamationcircle" size={30}  style={{paddingTop: 6}}  />
+                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textDecorationStyle:'solid', paddingLeft:10 }}> You can scroll and view your main feed to see current listings</Text>
                 
             </View>
 
-            <View style={{flexDirection:'row', justifyContent: 'space-between',  borderWidth:2,
-                 borderColor: '#DCDEDD', height: 75, width:360}}>
+            <View style={{flexDirection:'row',  borderWidth:2, borderLeftWidth: 0, borderRightWidth: 0,
+                 borderColor: '#DCDEDD', height: 90, width:360}}>
 
-                <Icon name="exclamation" size={20}   />
-                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textDecorationStyle:'solid', textAlign: "justify" }}>- Community features coming soon</Text>
+                <Icon name="exclamationcircle" size={30} style={{paddingTop: 6}}  />
+                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textDecorationStyle:'solid', paddingLeft: 10 }}> You can visit Sellers' social pages and websites</Text>
+                
+            </View>
+
+            <View style={{flexDirection:'row',  borderWidth:2, borderLeftWidth: 0, borderRightWidth: 0,
+                 borderColor: '#DCDEDD', height: 90, width:360}}>
+
+                <Icon name="exclamationcircle" size={30} style={{paddingTop: 6}}  />
+                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textDecorationStyle:'solid', paddingLeft: 10 }}> Community features coming soon</Text>
                 
             </View>
       </View>
@@ -99,7 +107,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'white',
     alignItems: 'flex-start',
-    justifyContent: 'center',
+    //justifyContent: 'center',
     padding: 20
 },
 });
