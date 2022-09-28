@@ -54,6 +54,7 @@ getData = async () => {
   try {
     const value = await AsyncStorage.getItem('Choices')
     if(value !== null) {
+      alert("Loading your selections")
       this.setState({
         products: value
       })
