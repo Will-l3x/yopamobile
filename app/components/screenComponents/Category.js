@@ -18,6 +18,7 @@ class Category extends Component {
      
     render() {
        const {Weburi} = this.props.route.params;
+       console.log(Weburi)
         return (
             <WebView
             source={{

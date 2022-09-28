@@ -67,7 +67,7 @@ class Homes extends Component {
 
                                         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                                                     <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textAlign:'center', paddingTop: 50, paddingBottom:25 }}>
-                                                    <TouchableOpacity onPress={() => {this.props.navigation.navigate('Web', {Weburi: this.props.item.facebookUrl })}}>
+                                                    <TouchableOpacity onPress={() => {this.props.navigation.navigate('Web', {Weburi: this.props.item.availability.$values.facebookUrl })}}>
                                                         <Icon name="logo-facebook" size={20} style={{  paddingLeft: 30 }}  />
                                                         </TouchableOpacity> 
                                                         <TouchableOpacity onPress={() => {this.props.navigation.navigate('Web', {Weburi: this.props.item.twitterUrl })}}>

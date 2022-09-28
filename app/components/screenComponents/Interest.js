@@ -4,12 +4,13 @@ import {
   View,
   StyleSheet,
   FlatList,
- 
+  TouchableOpacity,
   Button,
   Modal,
 } from 'react-native';
 //import CheckBox from '@react-native-community/checkbox';
 import Constants from 'expo-constants';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 
@@ -32,7 +33,39 @@ export default class Interest extends Component {
     this.state = {
       products: data,
     };
+    this.storeData = this.storeData.bind(this);
+    this.getData = this.getData.bind(this);
   }
+
+  componentDidMount(){
+    this.getData();
+  }
+
+   storeData = async () => {
+    try {
+      await AsyncStorage.setItem('Choices', this.state.products)
+    } catch (e) {
+      // saving error
+    }
+  }
+
+  
+getData = async () => {
+  try {
+    const value = await AsyncStorage.getItem('Choices')
+    if(value !== null) {
+      this.setState({
+        products: value
+      })
+    }else{
+      alert("No previous choice stored please select")
+    }
+  } catch(e) {
+    // error reading value
+    console.log(e)
+  }
+}
+
 
   handleChange = (id) => {
     let temp = this.state.products.map((product) => {
@@ -44,6 +77,7 @@ export default class Interest extends Component {
     this.setState({
       products: temp,
     });
+    
   };
 
   renderFlatList = (renderData) => {
@@ -60,8 +94,9 @@ export default class Interest extends Component {
                   justifyContent: 'space-between',
                 }}>
                 <Checkbox
-                  value={item.isChecked}
-                  onChange={() => {
+                  color= {`#FA4616`} uncheckedColor={`#FA4616`}
+                  status={item.isChecked}
+                  onPress={() => {
                     this.handleChange(item.id);
                   }}
                 />
@@ -82,7 +117,13 @@ export default class Interest extends Component {
           {this.renderFlatList(this.state.products)}
         </View>
         <Text style={styles.text}>Selected </Text>
+        <TouchableOpacity style={styles.loginBtn}
+                    onPress = {()=>{this.storeData()} }
+                    >
+                        <Text style={styles.loginText}>Save</Text>
+                    </TouchableOpacity>
         <View style={{ flex: 1 }}>{this.renderFlatList(selected)}</View>
+        
       </View>
     );
   }
@@ -116,4 +157,14 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: 'bold',
   },
+  loginBtn:{
+   
+    backgroundColor:"#35CAAC",
+  
+    
+    alignSelf:"center",
+    justifyContent:"center",
+    
+    borderColor: '#4a4a4a',
+}
 });
