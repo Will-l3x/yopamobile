@@ -30,7 +30,7 @@ const { height, width } = Dimensions.get('window')
 class Homes extends Component {
     constructor(props){
         super(props);
-        this. state = {
+        this.state = {
             modalVisible: false
           };
     }
@@ -46,6 +46,10 @@ class Homes extends Component {
             this.startHeaderHeight = 100 + StatusBar.currentHeight
         }
     }
+
+   
+
+    
 
     render() {
         const { modalVisible } = this.state;
@@ -64,25 +68,25 @@ class Homes extends Component {
                                         style={{ flex: 1, height: null, width: null, resizeMode: 'cover', borderRadius: 5, borderWidth: 1, borderColor: '#dddddd', justifyContent: 'center' }}
                                         source={{uri: this.props.item.image,cache: 'only-if-cached'}}
                                     />
-
+                                        
                                         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                                                     <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textAlign:'center', paddingTop: 50, paddingBottom:25 }}>
-                                                    <TouchableOpacity onPress={() => {this.props.navigation.navigate('Web', {Weburi: this.props.item.availability.$values.facebookUrl })}}>
+                                                    <TouchableOpacity onPress={() => {this.props.navigation.navigate('Web', {Weburi: this.props.item.facebook })}}>
                                                         <Icon name="logo-facebook" size={20} style={{  paddingLeft: 30 }}  />
                                                         </TouchableOpacity> 
-                                                        <TouchableOpacity onPress={() => {this.props.navigation.navigate('Web', {Weburi: this.props.item.twitterUrl })}}>
+                                                        <TouchableOpacity onPress={() => {this.props.navigation.navigate('Web', {Weburi: this.props.item.twitter })}}>
                                                         <Icon name="logo-twitter" size={20} style={{ paddingLeft: 15 }}  />
                                                         </TouchableOpacity> 
-                                                        <TouchableOpacity onPress={() => {this.props.navigation.navigate('Web', {Weburi: this.props.item.instagramUrl })}}>
+                                                        <TouchableOpacity onPress={() => {this.props.navigation.navigate('Web', {Weburi: this.props.item.instagram })}}>
                                                         <Icon name="logo-instagram" size={20} style={{ paddingLeft: 15 }}  />
                                                         </TouchableOpacity> 
                                                         <TouchableOpacity onPress={() => this.setModalVisible(true)}>
                                                         <Icon name="cart-outline" size={20} style={{ paddingLeft: 15 }}  />
                                                         </TouchableOpacity> 
-                                                        <TouchableOpacity onPress={() => {this.props.navigation.navigate('Web', {Weburi: this.props.item.website })}}>
+                                                        <TouchableOpacity >
                                                         <Icon name="location" size={20} style={{ paddingLeft:15 }}  />
                                                         </TouchableOpacity> 
-                                                        <TouchableOpacity onPress={() => this.setModalVisible(true)}>
+                                                        <TouchableOpacity onPress={() => {this.props.navigation.navigate('Web', {Weburi: this.props.item.website })}}>
                                                         <Icon name="globe" size={20} style={{ paddingLeft: 15 }} />
                                                         </TouchableOpacity> 
                                                         <TouchableOpacity onPress={() => this.setModalVisible(true)}>
@@ -94,6 +98,7 @@ class Homes extends Component {
                                                         
                                                     </Text>
                                                     </View>
+                                                    
                                    
                                     <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                                     <Text style={{ fontWeight: 'normal', marginTop: 10, color:'black' }}>R{this.props.item.salePrice}</Text> 
@@ -156,6 +161,7 @@ class Home extends Component{
         axios(config)
         .then((response)=> {
         console.log(JSON.stringify(response.data));
+
         this.setState({
             dataSource: response.data.$values,
             isLoading: false

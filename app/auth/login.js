@@ -14,6 +14,12 @@ export default class LogIn extends React.Component {
         var axios = require('axios');
         var data = JSON.stringify({"email":this.state.email,"password":this.state.password});
 
+        if(!this.state.email || !this.state.password){
+            alert("Please enter all fields")
+        }else{
+
+       
+
         var config = {
         method: 'post',
         url: 'https://itsyopaapi.herokuapp.com/api/login',
@@ -26,16 +32,18 @@ export default class LogIn extends React.Component {
         axios(config)
         .then((response)=> {
         console.log(JSON.stringify(response.data));
-        if (response.data.success == true){
-            alert('Log In Successful');
+        if (response.data.success === true){
+            alert(response.data.message);
             this.props.navigation.navigate('TabIndex');
         }else{
             alert(response.data.message);
         }
         })
         .catch(function (error) {
+            alert("Invalid Credidentials")
         console.log(error);
         });
+    }
 
     }
     render(){
