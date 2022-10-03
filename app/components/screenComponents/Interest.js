@@ -11,7 +11,7 @@ import {
 //import CheckBox from '@react-native-community/checkbox';
 import Constants from 'expo-constants';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 
 // or any pure javascript modules available in npm
@@ -56,13 +56,13 @@ getData = async () => {
   try {
     const value = await AsyncStorage.getItem('Choices')
     if(value !== null) {
-      alert("Loading your selections")
+      console.log("Loading your selections")
       console.log(JSON.parse(value))
       this.setState({
         products: JSON.parse(value)
       })
     }else{
-      alert("No previous choice stored please select")
+      console.log("No previous choice stored please select")
     }
   } catch(e) {
     // error reading value
@@ -108,7 +108,7 @@ clearAll = async () => {
                   justifyContent: 'space-between',
                 }}>
                 <Checkbox
-                  color= {`#FA4616`} uncheckedColor={`#FA4616`}
+                  color= {`#35CAAC`} uncheckedColor={`#35CAAC`}
                   status={item.isChecked}
                   onPress={() => {
                     this.handleChange(item.id);
@@ -127,17 +127,18 @@ clearAll = async () => {
     let selected = this.state.products?.filter((product) => product.isChecked);
     return (
       <View style={styles.container}>
+         <TouchableOpacity style={styles.loginBtn}
+            onPress = {()=>{this.storeData()} }
+            >
+            <Text style={styles.loginText}>Save</Text>
+        </TouchableOpacity>
         <View style={{ flex: 1 }}>
           {this.renderFlatList(this.state.products)}
         </View>
         <Text style={styles.text}>Selected </Text>
-        <TouchableOpacity style={styles.loginBtn}
-                    onPress = {()=>{this.storeData()} }
-                    >
-                        <Text style={styles.loginText}>Save</Text>
-                    </TouchableOpacity>
-        <View style={{ flex: 1 }}>{this.renderFlatList(selected)}</View>
         
+        <View style={styles.container}>{this.renderFlatList(selected)}</View>
+       
       </View>
     );
   }
@@ -147,7 +148,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    paddingTop: Constants.statusBarHeight,
+    //paddingTop: Constants.statusBarHeight,
     backgroundColor: '#ecf0f1',
     padding: 8,
   },
@@ -172,13 +173,19 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   loginBtn:{
-   
-    backgroundColor:"#35CAAC",
-  
-    
-    alignSelf:"center",
-    justifyContent:"center",
-    
-    borderColor: '#4a4a4a',
-}
+    width:wp('60%'),
+        backgroundColor:"#35CAAC",
+        borderRadius:wp('1.5%'),
+        height:hp('5%'),
+        alignSelf:"center",
+        justifyContent:"center",
+        marginTop:hp('3%'),
+        marginBottom:hp('2%'),
+        borderColor: '#4a4a4a',
+},
+loginText:{
+  color:"#4a4a4a",
+  alignSelf:"center",
+  justifyContent:"center",
+},
 });

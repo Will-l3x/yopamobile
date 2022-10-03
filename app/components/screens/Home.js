@@ -24,6 +24,7 @@ import Icon from 'react-native-vector-icons/Ionicons'
 import Category from "../screenComponents/Category";
 import Card from "../screenComponents/card";
 import {WebView} from 'react-native-webview';
+import call from 'react-native-phone-call';
 
 const { height, width } = Dimensions.get('window')
 
@@ -45,6 +46,15 @@ class Homes extends Component {
         if (Platform.OS == 'android') {
             this.startHeaderHeight = 100 + StatusBar.currentHeight
         }
+    }
+
+    initiateCall(number){
+        var args = {
+            number: number,
+            prompt: false
+        }
+
+        call(args).catch(console.error)
     }
 
    
@@ -92,7 +102,7 @@ class Homes extends Component {
                                                         <TouchableOpacity onPress={() => this.setModalVisible(true)}>
                                                         <Icon name="heart-outline" size={20} style={{ paddingLeft: 15 }} />
                                                         </TouchableOpacity> 
-                                                        <TouchableOpacity onPress={() => this.setModalVisible(true)}>
+                                                        <TouchableOpacity onPress={() => {this.initiateCall(this.props.item.phoneNumber)}}>
                                                         <Icon name="call" size={20} style={{ paddingLeft: 15 }} />
                                                     </TouchableOpacity> 
                                                         
