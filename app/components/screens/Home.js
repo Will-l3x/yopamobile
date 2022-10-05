@@ -105,6 +105,9 @@ class Homes extends Component {
                                                         <TouchableOpacity onPress={() => {this.initiateCall(this.props.item.phoneNumber)}}>
                                                         <Icon name="call" size={20} style={{ paddingLeft: 15 }} />
                                                     </TouchableOpacity> 
+                                                    <TouchableOpacity onPress={() => {this.initiateCall(this.props.item.phoneNumber)}}>
+                                                        <Icon name="logo-whatsapp" size={20} style={{ paddingLeft: 15 }} />
+                                                    </TouchableOpacity> 
                                                         
                                                     </Text>
                                                     </View>
