@@ -36,7 +36,7 @@ class Notifications extends Component {
             </TouchableOpacity>
 
 
-            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('TabIndexx')}}>
+            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Home')}}>
             <View style={{flexDirection:'row',  borderWidth:2, borderLeftWidth: 0, borderRightWidth: 0,
                  borderColor: '#DCDEDD', height: 90, width:360}}>
 
