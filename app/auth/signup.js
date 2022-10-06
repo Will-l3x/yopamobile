@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TextInput, TouchableOpacity,KeyboardAvoidingVie
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import {Picker} from '@react-native-picker/picker';
 import logs from '../../assets/logo.png';
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default class SignUp extends React.Component {
     state={
@@ -21,10 +21,13 @@ export default class SignUp extends React.Component {
         terms: false
     }
 
-    Register (){
+    Register = async ()=>{
        
         var axios = require('axios');
         var data = JSON.stringify({"username":this.state.username,"fullname":this.state.fullname,"email":this.state.emailAddress,"password":this.state.password,"dateofbirth":this.state.dob,"interest":this.state.interest,"city":this.state.city,"phonenumber":this.state.phoneNumber});
+
+        await AsyncStorage.setItem('userprofile', JSON.stringify(data))
+        console.log("data logges successfuly")
 
         var config = {
         method: 'post',
@@ -66,6 +69,7 @@ export default class SignUp extends React.Component {
                             style={styles.inputText}
                             placeholder="Full Name..."
                             placeholderTextColor="#9EABB9"
+                            onChangeText={text => this.setState({fullname: text})}
                             />
                     </View>
                     <View style={styles.inputView}>
