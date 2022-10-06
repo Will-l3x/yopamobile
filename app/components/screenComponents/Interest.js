@@ -46,6 +46,7 @@ export default class Interest extends Component {
    storeData = async () => {
     try {
       await AsyncStorage.setItem('Choices', JSON.stringify(this.state.products))
+      this.props.navigation.navigate('TabIndexx');
     } catch (e) {
       // saving error
     }

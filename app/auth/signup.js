@@ -18,6 +18,7 @@ export default class SignUp extends React.Component {
         fullname:'sdsd',
         interest: 'Clothing',
         dummy:'fsf',
+        terms: false
     }
 
     Register (){
@@ -39,7 +40,7 @@ export default class SignUp extends React.Component {
         console.log(JSON.stringify(response.data));
         if (response.data.success == true){
             alert(response.data.message);
-            this.props.navigation.navigate('LogIn');
+            this.props.navigation.navigate('picks');
         }else{
            alert(response.data.message);
         }

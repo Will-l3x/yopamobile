@@ -12,6 +12,8 @@ import SignUp from './app/auth/signup';
 import TabIndex from './app/components/screens';
 import FinishSignUp from './app/auth/finishisignup';
 import Category from './app/components/screenComponents/Category';
+import TermsAndConditions from './app/components/screenComponents/Terms';
+import Interest from './app/components/screenComponents/Interest';
 
 
 const Stack = createStackNavigator();
@@ -61,6 +63,22 @@ export default function App() {
                           headerLeft: null,
                       }}
                   />
+                  <Stack.Screen
+                        name='terms'
+                        component={TermsAndConditions}
+                        options={{
+                          headerShown: false,
+                          headerLeft: null,
+                      }}
+                  />
+                  <Stack.Screen
+                    name='picks'
+                    component={Interest}
+                    options={{
+                      headerShown: false,
+                      headerLeft: null,
+                  }}
+              />
             
         </Stack.Navigator>
       </NavigationContainer>
