@@ -23,11 +23,14 @@ export default class SignUp extends React.Component {
 
     Register = async ()=>{
        
+        if(!this.state.emailAddress || !this.state.password || !this.state.fullname || !this.state.username){
+            alert("Please enter all fields")
+        }else{
         var axios = require('axios');
         var data = JSON.stringify({"username":this.state.username,"fullname":this.state.fullname,"email":this.state.emailAddress,"password":this.state.password,"dateofbirth":this.state.dob,"interest":this.state.interest,"city":this.state.city,"phonenumber":this.state.phoneNumber});
 
         await AsyncStorage.setItem('userprofile', JSON.stringify(data))
-        console.log("data logges successfuly")
+        console.log("data logged successfuly")
 
         var config = {
         method: 'post',
@@ -49,9 +52,10 @@ export default class SignUp extends React.Component {
         }
         })
         .catch(function (error) {
+            alert("Passwords do not match")
         console.log(error);
         });
-
+    }
 
     }
     render(){

@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity,KeyboardAvoidingView, Image } from 'react-native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 export default class Update extends React.Component {
@@ -19,6 +19,28 @@ export default class Update extends React.Component {
         dummy:'fsf',
     }
 
+
+    componentDidMount(){
+
+    }
+
+    readdata = async ()=>{
+        try {
+            const value = await AsyncStorage.getItem('userprofile')
+            if(value !== null) {
+              console.log("Loading your selections")
+              console.log(JSON.parse(value))
+              this.setState({
+                products: JSON.parse(value)
+              })
+            }else{
+              console.log("No previous choice stored please select")
+            }
+          } catch(e) {
+            // error reading value
+            console.log(e)
+          }
+    }
     Login (){
         var axios = require('axios');
         var data = JSON.stringify({"email":this.state.email,"password":this.state.password});

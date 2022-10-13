@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "yopamobile",
-    "slug": "yopamobile",
+    "name": "YoPA",
+    "slug": "YoPA",
     "version": "2.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/logo.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/logo.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -25,18 +25,19 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "permissions": ["com.google.android.c2dm.permission.RECEIVE",
-      "com.anddoes.launcher.permission.UPDATE_COUNT",
-      "com.majeur.launcher.permission.UPDATE_BADGE",
-      "com.google.android.providers.gsf.permission.READ_GSERVICES",
-      "com.sonyericsson.home.permission.BROADCAST_BADGE",
-      "com.htc.launcher.permission.READ_SETTINGS",
-      "com.htc.launcher.permission.UPDATE_SHORTCUT",
-      "com.sec.android.provider.badge.permission.READ",
-      "com.sec.android.provider.badge.permission.WRITE"],
+      "permissions": [
+        "com.google.android.c2dm.permission.RECEIVE",
+        "com.anddoes.launcher.permission.UPDATE_COUNT",
+        "com.majeur.launcher.permission.UPDATE_BADGE",
+        "com.google.android.providers.gsf.permission.READ_GSERVICES",
+        "com.sonyericsson.home.permission.BROADCAST_BADGE",
+        "com.htc.launcher.permission.READ_SETTINGS",
+        "com.htc.launcher.permission.UPDATE_SHORTCUT",
+        "com.sec.android.provider.badge.permission.READ",
+        "com.sec.android.provider.badge.permission.WRITE"
+      ],
       "package": "com.itsyopa.yopamobile",
-      "versionCode": 4
-      
+      "versionCode": 7
     },
     "web": {
       "favicon": "./assets/favicon.png"
