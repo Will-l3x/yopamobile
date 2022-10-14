@@ -49,7 +49,7 @@ export default class Update extends React.Component {
                     emailAddress: response.data.email,
                     fullname: response.data.fullname,
                     username: response.data.username,
-                    
+
                   })
                 })
                 .catch(function (error) {
@@ -103,14 +103,14 @@ export default class Update extends React.Component {
                 <View style={styles.inputView}>
                         <TextInput
                             style={styles.inputText}
-                            placeholder="Full Name..."
+                            placeholder={this.state.fullname}
                             placeholderTextColor="#9EABB9"
                             />
                     </View>
                     <View style={styles.inputView}>
                         <TextInput
                             style={styles.inputText}
-                            placeholder="Username..."
+                            placeholder={this.state.username}
                             placeholderTextColor="#9EABB9"
                             onChangeText={text => this.setState({username:text})}/>
                     </View>
