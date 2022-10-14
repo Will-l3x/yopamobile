@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, TextInput, TouchableOpacity,KeyboardAvoidingView, Image } from 'react-native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 import logs from '../../assets/logo.png';
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default class LogIn extends React.Component {
     state={
@@ -34,6 +34,7 @@ export default class LogIn extends React.Component {
         console.log(JSON.stringify(response.data));
         if (response.data.success === true){
             alert(response.data.message);
+            AsyncStorage.setItem('token', JSON.stringify(response.data.token))
             this.props.navigation.navigate('TabIndex');
         }else{
             alert(response.data.message);

@@ -18,19 +18,28 @@ export default class SignUp extends React.Component {
         fullname:'sdsd',
         interest: 'Clothing',
         dummy:'fsf',
+        confirm: "",
         terms: false
     }
 
     Register = async ()=>{
-       
+
+       let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+       if (reg.test(this.state.emailAddress) === false) {
+        alert("Email is Not Correct");
+
+      }else{
+       if(this.state.password !== this.state.confirm){
+        alert("Passwords do not match please re-enter")
+       }else{
+
         if(!this.state.emailAddress || !this.state.password || !this.state.fullname || !this.state.username){
             alert("Please enter all fields")
         }else{
         var axios = require('axios');
         var data = JSON.stringify({"username":this.state.username,"fullname":this.state.fullname,"email":this.state.emailAddress,"password":this.state.password,"dateofbirth":this.state.dob,"interest":this.state.interest,"city":this.state.city,"phonenumber":this.state.phoneNumber});
 
-        await AsyncStorage.setItem('userprofile', JSON.stringify(data))
-        console.log("data logged successfuly")
+        
 
         var config = {
         method: 'post',
@@ -46,16 +55,21 @@ export default class SignUp extends React.Component {
         console.log(JSON.stringify(response.data));
         if (response.data.success == true){
             alert(response.data.message);
+            AsyncStorage.setItem('token', JSON.stringify(response.data.token))
+            console.log("data logged successfuly")
             this.props.navigation.navigate('picks');
         }else{
            alert(response.data.message);
         }
         })
         .catch(function (error) {
-            alert("Passwords do not match")
+            alert("Try a different email")
+            this.props.navigation.navigate('SignUp')
         console.log(error);
         });
     }
+}
+      }
 
     }
     render(){
@@ -114,6 +128,7 @@ export default class SignUp extends React.Component {
                               style={styles.inputText}
                               placeholder="Confirm Password..."
                               placeholderTextColor="#9EABB9"
+                              onChangeText={text =>this.setState({confirm: text})}
                               />
                       </View>
                      

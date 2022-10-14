@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "YoPA",
-    "slug": "YoPA",
+    "name": "yopamobile",
+    "slug": "yopamobile",
     "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./assets/logo.png",
@@ -37,7 +37,7 @@
         "com.sec.android.provider.badge.permission.WRITE"
       ],
       "package": "com.itsyopa.yopamobile",
-      "versionCode": 7
+      "versionCode": 8
     },
     "web": {
       "favicon": "./assets/favicon.png"

@@ -21,18 +21,41 @@ export default class Update extends React.Component {
 
 
     componentDidMount(){
-
+        this.readdata();
     }
 
     readdata = async ()=>{
         try {
-            const value = await AsyncStorage.getItem('userprofile')
+            const val = await AsyncStorage.getItem('token')
+            const value = JSON.parse(val)
+            console.log(value)
+            const Attach = "Bearer "+ value
+            console.log(Attach)
             if(value !== null) {
-              console.log("Loading your selections")
-              console.log(JSON.parse(value))
-              this.setState({
-                products: JSON.parse(value)
-              })
+                var axios = require('axios');
+
+                var config = {
+                  method: 'get',
+                  url: 'https://itsyopaapi.herokuapp.com/api/me',
+                  headers: { 
+                    'Authorization': Attach
+                  }
+                };
+                
+                axios(config)
+                .then((response)=> {
+                  console.log(JSON.stringify(response.data));
+                  this.setState({
+                    emailAddress: response.data.email,
+                    fullname: response.data.fullname,
+                    username: response.data.username,
+                    
+                  })
+                })
+                .catch(function (error) {
+                  console.log(error);
+                });
+                
             }else{
               console.log("No previous choice stored please select")
             }
@@ -95,7 +118,7 @@ export default class Update extends React.Component {
                     <View style={styles.inputView}>
                         <TextInput
                             style={styles.inputText}
-                            placeholder="Email..."
+                            placeholder={this.state.emailAddress}
                             placeholderTextColor="#9EABB9"
                             onChangeText={text => this.setState({emailAddress:text})}/>
                     </View>
