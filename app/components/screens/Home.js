@@ -81,7 +81,7 @@ class Homes extends Component {
                                         
                                         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                                                     <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textAlign:'center', paddingTop: 50, paddingBottom:25 }}>
-                                                    <TouchableOpacity onPress={() => { if(this.props.item.facebook=== null){
+                                                    <TouchableOpacity onPress={() => { if(this.props.item.facebook == null){
                                                         alert('No facebook link available')
                                                     }else{
                                                         this.props.navigation.navigate('Web', {Weburi: this.props.item.facebook })}
@@ -90,7 +90,7 @@ class Homes extends Component {
                                                         </TouchableOpacity> 
 
 
-                                                        <TouchableOpacity onPress={() => {if(this.props.item.twitter === null){
+                                                        <TouchableOpacity onPress={() => {if(this.props.item.twitter == null){
                                                             alert("No Twitter Link available")
                                                         }else{
                                                             this.props.navigation.navigate('Web', {Weburi: this.props.item.twitter })}}}>
@@ -98,7 +98,7 @@ class Homes extends Component {
                                                         </TouchableOpacity>
 
 
-                                                        <TouchableOpacity onPress={() => {if(this.props.item.instagram === null){
+                                                        <TouchableOpacity onPress={() => {if(this.props.item.instagram == null){
                                                             alert("No Instagram Link Available")
                                                         }else{
                                                             this.props.navigation.navigate('Web', {Weburi: this.props.item.instagram })}}}>
@@ -113,7 +113,7 @@ class Homes extends Component {
                                                         <TouchableOpacity >
                                                         <Icon name="location" size={20} style={{ paddingLeft:15 }}  />
                                                         </TouchableOpacity> 
-                                                        <TouchableOpacity onPress={() => {if(this.props.item.website === null){
+                                                        <TouchableOpacity onPress={() => {if(this.props.item.website == null){
                                                             alert("No website link available")
                                                         }else{
                                                             this.props.navigation.navigate('Web', {Weburi: this.props.item.website })}}}>
@@ -125,13 +125,13 @@ class Homes extends Component {
                                                         <TouchableOpacity >
                                                         <Icon name="heart-outline" size={20} style={{ paddingLeft: 15 }} />
                                                         </TouchableOpacity> 
-                                                        <TouchableOpacity onPress={() => {if(this.props.item.phoneNumber === null){
+                                                        <TouchableOpacity onPress={() => {if(this.props.item.phoneNumber == null){
                                                             alert("No Phone number available")
                                                         }else{
                                                             this.initiateCall(this.props.item.phoneNumber)}}}>
                                                         <Icon name="call" size={20} style={{ paddingLeft: 15 }} />
                                                     </TouchableOpacity> 
-                                                    <TouchableOpacity onPress={() => {if(this.props.item.whatsapp === null){
+                                                    <TouchableOpacity onPress={() => {if(this.props.item.whatsapp == null){
                                                         alert('No whatsapp number available')
                                                     }else{
                                                         this.initiateCall(this.props.item.whatsapp)}}}>
