@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { Alert, Modal, StyleSheet, Text, Pressable, View, TouchableOpacity } from "react-native";
+import { Alert, Modal, StyleSheet, Text, Pressable, View, TouchableOpacity, Image } from "react-native";
 import  { BackHandler } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign'
+import logo from '../../../assets/logo2.png'
 class Notifications extends Component {
   state = {
     modalVisible: false
@@ -20,7 +21,7 @@ class Notifications extends Component {
             <View style={{flexDirection:'row',   borderWidth:2, borderLeftWidth:0, borderRightWidth:0, borderTopWidth: 0,
                  borderColor: '#DCDEDD', height: 80, width: 360}}>
 
-                <Icon name="exclamationcircle" size={30} style={{paddingTop: 6}}   />
+                <Image source={require('../../../assets/logo2.png')} style={{width: 40, maxWidth: 45, height:40}}   />
                 <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black',  textDecorationStyle:'solid',paddingLeft:10 }}> Welcome to YoPA Early Birds Version</Text>
                 
             </View>
@@ -29,7 +30,7 @@ class Notifications extends Component {
             <View style={{flexDirection:'row',  borderWidth:2, borderLeftWidth:0, borderRightWidth: 0,
                  borderColor: '#DCDEDD', height: 90, width:360}}>
 
-                <Icon name="exclamationcircle" size={30} style={{paddingTop: 6}}   />
+                <Image source={require('../../../assets/logo2.png')} style={{width: 40, maxWidth: 45, height:40}}   />
                 <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black',  textDecorationStyle:'solid', paddingLeft:10 }}> You can now add and save your interests</Text>
                 
             </View>
@@ -40,7 +41,7 @@ class Notifications extends Component {
             <View style={{flexDirection:'row',  borderWidth:2, borderLeftWidth: 0, borderRightWidth: 0,
                  borderColor: '#DCDEDD', height: 90, width:360}}>
 
-                <Icon name="exclamationcircle" size={30}  style={{paddingTop: 6}}  />
+                <Image source={require('../../../assets/logo2.png')} style={{width: 40, maxWidth: 45, height:40}}   />
                 <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textDecorationStyle:'solid', paddingLeft:10 }}> You can scroll and view your main feed to see current listings</Text>
                 
             </View>
@@ -51,7 +52,7 @@ class Notifications extends Component {
             <View style={{flexDirection:'row',  borderWidth:2, borderLeftWidth: 0, borderRightWidth: 0,
                  borderColor: '#DCDEDD', height: 90, width:360}}>
 
-                <Icon name="exclamationcircle" size={30} style={{paddingTop: 6}}  />
+                <Image source={require('../../../assets/logo2.png')} style={{width: 40, maxWidth: 45, height:40}}   />
                 <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textDecorationStyle:'solid', paddingLeft: 10 }}> You can visit Sellers' social pages and websites</Text>
                 
             </View>
@@ -61,7 +62,7 @@ class Notifications extends Component {
             <View style={{flexDirection:'row',  borderWidth:2, borderLeftWidth: 0, borderRightWidth: 0,
                  borderColor: '#DCDEDD', height: 90, width:360}}>
 
-                <Icon name="exclamationcircle" size={30} style={{paddingTop: 6}}  />
+                <Image source={require('../../../assets/logo2.png')} style={{width: 40, maxWidth: 45, height:40}}   />
                 <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textDecorationStyle:'solid', paddingLeft: 10 }}> Community features coming soon</Text>
                 
             </View>

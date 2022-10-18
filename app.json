@@ -4,12 +4,12 @@
     "slug": "yopamobile",
     "version": "2.0.0",
     "orientation": "portrait",
-    "icon": "./assets/logo.png",
+    "icon": "./assets/logo2.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/logo.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#35CAAC"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -22,7 +22,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/logo2.png",
         "backgroundColor": "#FFFFFF"
       },
       "permissions": [
@@ -37,10 +37,10 @@
         "com.sec.android.provider.badge.permission.WRITE"
       ],
       "package": "com.itsyopa.yopamobile",
-      "versionCode": 8
+      "versionCode": 9
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/logo2.png"
     },
     "description": ""
   }
