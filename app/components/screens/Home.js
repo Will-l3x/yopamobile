@@ -226,23 +226,7 @@ class Home extends Component{
         return(
         <SafeAreaView>
             <View style={{ height: this.startHeaderHeight, backgroundColor: 'white', borderBottomWidth: 1, borderBottomColor: '#dddddd' }}>
-                        <View style={{
-                            flexDirection: 'row', padding: 10,
-                            backgroundColor: 'white', marginHorizontal: 20,
-                            shadowOffset: { width: 0, height: 0 },
-                            shadowColor: 'black',
-                            shadowOpacity: 0.2,
-                            elevation: 1,
-                            marginTop: Platform.OS == 'android' ? 30 : null
-                        }}>
-                            <Icon name="ios-search" size={20} style={{ marginRight: 10 }} />
-                            <TextInput
-                                underlineColorAndroid="transparent"
-                                placeholder="Experience new shopping format"
-                                placeholderTextColor="grey"
-                                style={{ flex: 1, fontWeight: '700', backgroundColor: 'white' }}
-                            />
-                        </View>
+                        
                     </View>
                   
                         <View style={{ flex: 1, backgroundColor: 'white', paddingTop: 20 }}>
@@ -251,22 +235,15 @@ class Home extends Component{
                             </Text>
 
                            
-                            <View style={{ marginTop: 40, paddingHorizontal: 20 }}>
-                                <Text style={{ fontSize: 24, fontWeight: '700', color:'black' }}>
-                                    Your Feed
-                                </Text>
-                                <Text style={{ fontWeight: '100', marginTop: 10, color:'black' }}>
-                                    A new selection of verified discounted offers
-
-                                </Text>
-                                </View>
+                           
                             </View>
                             
-            <View style={{justifyContent: 'center'}}>
+            <View style={{justifyContent: 'center', height: '90%'}}>
                 <ScrollView 
                     showsVerticalScrollIndicator={false}
                 >
                 <FlatList
+                    contentContainerStyle={{paddingBottom:20}}
                     data={this.state.dataSource}
                     renderItem={({item, index})=>{
                         return(

@@ -21,9 +21,9 @@ class Settings extends Component {
             <View style={{flexDirection:'row', justifyContent: 'space-between',  borderWidth:2,
                  borderColor: '#DCDEDD',height: 75}}>
 
-                <Icon name="hearto" size={20} style={{  paddingLeft: 30 }}  />
+                
                 <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textDecorationLine:'underline', textDecorationStyle:'solid' }}>My Interests</Text>
-                <Icon name="right" size={20} style={{  paddingLeft: 30 }}  />
+               
             </View>
             </TouchableOpacity>
             <TouchableOpacity onPress={()=>{this.props.navigation.navigate('location')}}>
