@@ -225,18 +225,8 @@ class Home extends Component{
           }
         return(
         <SafeAreaView>
-            <View style={{ height: this.startHeaderHeight, backgroundColor: 'white', borderBottomWidth: 1, borderBottomColor: '#dddddd' }}>
-                        
-                    </View>
-                  
-                        <View style={{ flex: 1, backgroundColor: 'white', paddingTop: 20 }}>
-                            <Text style={{ fontSize: 24, fontWeight: '700', paddingHorizontal: 20, color:'black' }}>
-                                What can we help you shop for?
-                            </Text>
-
-                           
-                           
-                            </View>
+            
+                       
                             
             <View style={{justifyContent: 'center', height: '90%'}}>
                 <ScrollView 

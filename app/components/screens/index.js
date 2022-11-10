@@ -23,6 +23,7 @@ import LogIn from '../../auth/login';
 import Interest from '../screenComponents/Interest';
 import Location from '../screenComponents/Location';
 import Update from '../screenComponents/Update';
+import DeleteAcc from '../../auth/Delete';
 
 
 
@@ -45,6 +46,7 @@ export default function TabIndex() {
         <Stack.Screen name="location" component={Location}/>
         <Stack.Screen name="update" component={Update}/>
         <Stack.Screen name ='logout' component={LogIn}/>
+        <Stack.Screen name="Delete" component={DeleteAcc}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "yopamobile",
+    "name": "YoPA App",
     "slug": "yopamobile",
     "version": "2.0.0",
     "orientation": "portrait",
@@ -18,7 +18,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.itsyopa.yopamobile"
     },
     "android": {
       "adaptiveIcon": {
@@ -37,11 +38,16 @@
         "com.sec.android.provider.badge.permission.WRITE"
       ],
       "package": "com.itsyopa.yopamobile",
-      "versionCode": 9
+      "versionCode": 12
     },
     "web": {
       "favicon": "./assets/logo2.png"
     },
-    "description": ""
+    "description": "",
+    "extra": {
+      "eas": {
+        "projectId": "85b68104-0dbf-4572-ba98-9af30e5b87e2"
+      }
+    }
   }
 }

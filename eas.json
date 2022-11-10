@@ -1,0 +1,25 @@
+{
+  "cli": {
+    "version": ">= 2.6.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal"
+    },
+    "production": {}
+  },
+  "submit": {
+    "production": {
+      "ios":{
+        "appleId": "nyasha.ventures@gmail.com",
+        "ascAppId": "6443937786",
+        "appleTeamId": "D67Z5YXPBH"
+      }
+
+    }
+  }
+}
