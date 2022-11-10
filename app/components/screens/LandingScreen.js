@@ -26,7 +26,7 @@ import Card from "../screenComponents/card";
 import {WebView} from 'react-native-webview';
 import call from 'react-native-phone-call';
 import Icons from 'react-native-vector-icons/MaterialCommunityIcons';
-
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 const { height, width } = Dimensions.get('window')
 
 class Homes extends Component {
@@ -80,67 +80,11 @@ class Homes extends Component {
                                         source={{uri: this.props.item.image,cache: 'only-if-cached'}}
                                     />
                                         
-                                        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                                                    <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black', textAlign:'center', paddingTop: 50, paddingBottom:25 }}>
-                                                    <TouchableOpacity onPress={() => { if(this.props.item.facebook == null){
-                                                        alert('No facebook link available')
-                                                    }else{
-                                                        this.props.navigation.navigate('Web', {Weburi: this.props.item.facebook })}
-                                                        }}>
-                                                        <Icon name="logo-facebook" size={20} style={{  paddingLeft: 30 }}  />
-                                                        </TouchableOpacity> 
-
-
-                                                        <TouchableOpacity onPress={() => {if(this.props.item.twitter == null){
-                                                            alert("No Twitter Link available")
-                                                        }else{
-                                                            this.props.navigation.navigate('Web', {Weburi: this.props.item.twitter })}}}>
-                                                        <Icon name="logo-twitter" size={20} style={{ paddingLeft: 15 }}  />
-                                                        </TouchableOpacity>
-
-
-                                                        <TouchableOpacity onPress={() => {if(this.props.item.instagram == null){
-                                                            alert("No Instagram Link Available")
-                                                        }else{
-                                                            this.props.navigation.navigate('Web', {Weburi: this.props.item.instagram })}}}>
-                                                        <Icon name="logo-instagram" size={20} style={{ paddingLeft: 15 }}  />
-                                                        </TouchableOpacity> 
-
-
-
-                                                        <TouchableOpacity >
-                                                        <Icon name="cart-outline" size={20} style={{ paddingLeft: 15 }}  />
-                                                        </TouchableOpacity> 
-                                                        <TouchableOpacity >
-                                                        <Icon name="location" size={20} style={{ paddingLeft:15 }}  />
-                                                        </TouchableOpacity> 
-                                                        <TouchableOpacity onPress={() => {if(this.props.item.website == null){
-                                                            alert("No website link available")
-                                                        }else{
-                                                            this.props.navigation.navigate('Web', {Weburi: this.props.item.website })}}}>
-                                                        <Icon name="globe" size={20} style={{ paddingLeft: 15 }} />
-                                                        </TouchableOpacity> 
-
-
-
-                                                        <TouchableOpacity >
-                                                        <Icon name="heart-outline" size={20} style={{ paddingLeft: 15 }} />
-                                                        </TouchableOpacity> 
-                                                        <TouchableOpacity onPress={() => {if(this.props.item.phoneNumber == null){
-                                                            alert("No Phone number available")
-                                                        }else{
-                                                            this.initiateCall(this.props.item.phoneNumber)}}}>
-                                                        <Icon name="call" size={20} style={{ paddingLeft: 15 }} />
-                                                    </TouchableOpacity> 
-                                                    <TouchableOpacity onPress={() => {if(this.props.item.whatsapp == null){
-                                                        alert('No whatsapp number available')
-                                                    }else{
-                                                        this.initiateCall(this.props.item.whatsapp)}}}>
-                                                        <Icon name="logo-whatsapp" size={20} style={{ paddingLeft: 15 }} />
-                                                    </TouchableOpacity> 
-                                                        
-                                                    </Text>
-                                                    </View>
+                                        <TouchableOpacity style={styles.loginBtn}
+                                                onPress = {()=>{this.props.navigation.navigate('LogIn')} }
+                                                     >
+                                                <Text style={styles.loginText}>Get Details</Text>
+                                        </TouchableOpacity>
                                                     
                                    
                                     <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
@@ -175,7 +119,7 @@ class Homes extends Component {
     }
 }
 
-class Home extends Component{
+class LandingScreen extends Component{
     constructor(props){
         super(props);
         this.state = {
@@ -250,7 +194,7 @@ class Home extends Component{
         )
     }
 }
-export default Home;
+export default LandingScreen;
 
 const styles = StyleSheet.create({
     container: {
@@ -284,6 +228,17 @@ const styles = StyleSheet.create({
         padding: 10,
         elevation: 2
       },
+      loginBtn:{
+        width:wp('60%'),
+        backgroundColor:"#35CAAC",
+        borderRadius:wp('1.5%'),
+        height:hp('5%'),
+        alignSelf:"center",
+        justifyContent:"center",
+        marginTop:hp('3%'),
+        marginBottom:hp('2%'),
+        borderColor: '#4a4a4a',
+    },
       buttonOpen: {
         backgroundColor: "#F194FF",
       },
@@ -299,6 +254,11 @@ const styles = StyleSheet.create({
         marginBottom: 15,
         textAlign: "center"
       },
+      loginText:{
+        color:"#4a4a4a",
+        alignSelf:"center",
+        justifyContent:"center",
+    },
       ContactSeller:{
        
         backgroundColor:"#fff",

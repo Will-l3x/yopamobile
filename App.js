@@ -14,6 +14,8 @@ import FinishSignUp from './app/auth/finishisignup';
 import Category from './app/components/screenComponents/Category';
 import TermsAndConditions from './app/components/screenComponents/Terms';
 import Interest from './app/components/screenComponents/Interest';
+import Home from './app/components/screens/Home';
+import LandingScreen from './app/components/screens/LandingScreen';
 
 
 const Stack = createStackNavigator();
@@ -22,7 +24,16 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName={LogIn}>
+        <Stack.Navigator initialRouteName={LandingScreen}>
+
+            <Stack.Screen name="landingpage"
+                          component={LandingScreen}
+                          options={{
+                            headerShown: false,
+                            headerLeft: null,
+                            }}
+                    />
+                          
             <Stack.Screen
                           name="LogIn"
                           component={LogIn}
