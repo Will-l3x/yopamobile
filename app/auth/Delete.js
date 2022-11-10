@@ -54,9 +54,7 @@ export default class DeleteAcc extends React.Component {
                     <Image source = {logs} style ={styles.logos} resizeMode="contain"/>
                 </View>
 
-                <View style={styles.logoContainer}>
-                    <Text style={styles.logo}>Sad To See you Go!</Text>
-                </View>
+                
                 <View style={styles.formView}>
                     <Text style={styles.formHeading}>Delete Your Account </Text>
                     <View style={styles.inputView}>
