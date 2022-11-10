@@ -1,3 +1,4 @@
+
 import React , {Component} from 'react';
 import { View, Text, ScrollView, Dimensions, TouchableOpacity } from 'react-native';
 
@@ -16,7 +17,7 @@ class TermsAndConditions extends Component{
   render(){
     return (
      <View style={styles.container}>
-            <Text style={styles.title}>Terms and conditions</Text>
+            <Text style={styles.title}>ItsYopa</Text>
             <ScrollView 
             style={styles.tcContainer}
             onScroll={({nativeEvent}) => {
@@ -27,71 +28,44 @@ class TermsAndConditions extends Component{
                 }
               }}
             >
-                <Text style={styles.tcP}>TERMS AND CONDITIONS OF THIS SITE
-
-Please find herein our terms and conditions for use of this Site. These terms and conditions, together with the Billing Statement, Listing Policy, Mobile Device Terms and Conditions, (the "Annexures") form this Agreement.
-
-This Agreement is a binding agreement between you and YOPA (Pty) Ltd. It sets out the terms and conditions governing your registration and use of the services and facilities offered on this site, so please read it carefully. If you are uncertain, or you do not agree with the terms and conditions or any of the Annexures then you should not accept them.
-
-However please be advised we will only provide you with the platform and or Services once you have accepted the terms and conditions of this Agreement by clicking on the "I ACCEPT" button when registering with us.
-
-By entering any and all personal information on this Site in the creation of an account, in registering with YOPA, in making a sale or participating in a transaction and/or by accepting this Agreement, you consent to the processing of your and or your entities information by YOPA in terms of the Protection of Personal Information Act No4 of 2013 (hereafter referred to as the Protection of Personal Information Act).
-
-PART 1: DEFINITIONS
-
-"Agreement" means these terms and conditions, the Billing Statement, the Rating Systems Rules, the Listing Policy, Privacy Statement, Mobile Device Terms & Conditions (the "Annexures");
-
+                <Text style={styles.tcP}>ItsYopa Terms & Conditions</Text>
+                <Text style={styles.tcP}>TERMS AND CONDITIONS OF THIS APP </Text>
+                    <Text style={styles.tcL}>{'\u2022'} Please find herein our terms and conditions for use of this Site. These terms and conditions, together with the Billing Statement, Listing Policy, Mobile Device Terms and Conditions, (the "Annexures") form this Agreement.This Agreement is a binding agreement between you and YOPA (Pty) Ltd. It sets out the terms and conditions governing your registration and use of the services and facilities offered on this site, so please read it carefully. If you are uncertain, or you do not agree with the terms and conditions or any of the Annexures then you should not accept them.However please be advised we will only provide you with the platform and or Services once you have accepted the terms and conditions of this Agreement by clicking on the "I ACCEPT" button when registering with us.By entering any and all personal information on this Site in the creation of an account, in registering with YOPA, in making a sale or participating in a transaction and/or by accepting this Agreement, you consent to the processing of your and or your entities information by YOPA in terms of the Protection of Personal Information Act No4 of 2013 (hereafter referred to as the Protection of Personal Information Act).</Text>
+                    <Text style={styles.tcP}>PART 1: DEFINITIONS </Text>
+                    <Text style={styles.tcL}>{'\u2022'} "Agreement" means these terms and conditions, the Billing Statement, the Rating Systems Rules, the Listing Policy, Privacy Statement, Mobile Device Terms & Conditions (the "Annexures");
 Guidelines" means the guidelines issued by YOPA from time to time governing the listing/advertising/offering, on the mobile application, of goods for sale and or available services as a direct result of registering on this site;
-
 "Buyer" means a person, firm or company who purchases, any goods or services listed/advertised/offered on the YOPA mobile application;
-
 "Confirmation Notice" means the notification set out in Clause 10.1;
-
 "Fees" means any charges which YOPA charge as per the Billing Statement;
-
 "Indemnified Party" means officers, employees, contractors, consultants and agents from time to time of YOPA, and any related entities, associates or affiliates of YOPA, and each of their respective officers, employees, contractors, consultants and agents from time to time;
-
 "Intellectual Property Rights" means industrial and intellectual property whether protected by common law or under statute including (without limitation) copyright and neighbouring rights, all rights in relation to inventions (including registered patents and the benefit of any applications for a patent), plant varieties, plant breeders, registered and unregistered trade-marks, registered and unregistered designs including drawings, circuit layouts and all other rights resulting from intellectual activity in the industrial, scientific, literary or artistic fields anywhere in the world;
-
 "Listings" means availing/advertising/offering goods for sale or services to be provided on the Yopa mobile application as a result of an active account registered on this Site;
-
 ‘’Participating stores” refers to individuals/chains/franchises/businesses or any other juristic and or natural person that registers with YOPA and places a listing/advertisement/offering for the sale of goods or provision of services to buyers and or users of the Yopa mobile application;
-
-"Personal information" or "Your information" or “Private information” refers to “Personal information”, “your information” or “Private information” all of which are used interchangeably in this Agreement and which mean any and all information you provide to us in using this Site including, but not limited to:
-
- 
-
+"Personal information" or "Your information" or “Private information” refers to “Personal information”, “your information” or “Private information” all of which are used interchangeably in this Agreement and which mean any and all information you provide to us in using this Site including, but not limited to: 
 - You and or your entities registration details including your and or your entities name, address, telephone and fax numbers;
-
 - You and your entities credit card details or any other financial information;
-
 - Unique identifiers including your entities name and VAT number;
-
 - The information that we learn about you and or your entity as a result of your use as well as the use of your entity of this Site, including without limitation, through the listing/advertisement/offering for sale of goods and services on the Yopa mobile application;
-
 - The information obtained from you and or your entity in confirmation of your identity and or the registration details of your entity, address and contact information for security and verification reasons;
-
 - That information defined as personal information in section 1 of the Protection of Personal Information Act.
-
 "Seller" means a natural person, firm, company or entity who has an account with YOPA and as such places a listing/advertisement/offer for the sale of goods or provision of services on the Yopa mobile application:
-
 "Site" or "Website" means the Internet website by which YOPA offers the Services from time to time, currently [insert website address]
-
 "user" or "users" means any Buyer, seller, or anybody else who is using the Site;
-
 "VAT" means any value added tax, or other consumption tax;
-
 "we", "us", "our", "ourselves" and "YOPA" are used interchangeably in this Agreement and all mean YOPA;
-
-"you" or "your" means you, whether as a Buyer and/or you as a Seller, as the case requires, or otherwise, and your successors and permitted assignees;
-
-assignees;
-
- 
-
-PART 2: SALE TERMS AND CONDITIONS
-
-1 Trading on this Site
+"you" or "your" means you, whether as a Buyer and/or you as a Seller, as the case requires, or otherwise, and your successors and permitted assignees;</Text>
+                    
+<Text style={styles.tcP}>PART 2: SALE TERMS AND CONDITIONS </Text>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <Text style={styles.tcL}>{'\u2022'} 1 Trading on this Site
 
 1.1 As we are not directly involved in any sale and purchase of any goods and services on this Site, save for placing listings/advertisements/offerings of deals/specials/sales of goods and services by participating stores, including yourself, to individuals who are using the YOPA mobile application, you hereby agree and acknowledge that we:
 
@@ -157,11 +131,12 @@ PART 2: SALE TERMS AND CONDITIONS
 
 2.4 You agree to provide all necessary equipment, network connections and software to access this Site.
 
-2.5 You agree that YOPA may restrict and/or terminate its services to you at any point in time if, in its sole and absolute discretion, elects to do so and without having to furnish any reasons for doing so.
-
-3 Fees
-
-3.1 In order to list/advertise/offer, deals, sales, discounts, promotions, goods, services to users of the YOPA mobile application you are required to PURCHASE one of the following packages;
+2.5 You agree that YOPA may restrict and/or terminate its services to you at any point in time if, in its sole and absolute discretion, elects to do so and without having to furnish any reasons for doing so.</Text>
+                    
+<Text style={styles.tcP}>PART 3:Fees </Text>
+                    
+                    
+                    <Text style={styles.tcL}>{'\u2022'} 3.1 In order to list/advertise/offer, deals, sales, discounts, promotions, goods, services to users of the YOPA mobile application you are required to PURCHASE one of the following packages;
 
 3.1.1
 
@@ -177,11 +152,12 @@ PART 2: SALE TERMS AND CONDITIONS
 
 3.6 Unless otherwise stated, all fees are quoted in South African Rands and are inclusive of VAT.
 
-3.7 Sellers/participating stores are given the right to list/advertise/offer deals, sales, discounts, promotions, goods, services to users of the YOPA mobile application by paying the relevant fees. we reserve the right in our sole discretion to place third party advertisements on any page on the YOPA website, mobile application without your consent or payment to you.
-
-4 Seller
-
-4.1 Subject to this Clause 4 and Clause 9, you may register on this site and while your account is in good standing you will be permitted to list/advertise/offer, deals, sales, discounts, promotions, goods, services to users of the YOPA mobile application
+3.7 Sellers/participating stores are given the right to list/advertise/offer deals, sales, discounts, promotions, goods, services to users of the YOPA mobile application by paying the relevant fees. we reserve the right in our sole discretion to place third party advertisements on any page on the YOPA website, mobile application without your consent or payment to you.</Text>
+                    
+                    
+<Text style={styles.tcP}>PART 4:Seller </Text>
+                    
+                    <Text style={styles.tcL}>{'\u2022'} 4.1 Subject to this Clause 4 and Clause 9, you may register on this site and while your account is in good standing you will be permitted to list/advertise/offer, deals, sales, discounts, promotions, goods, services to users of the YOPA mobile application
 
 4.2 You agree that we or our nominated agent may undertake any necessary credit checks on you and/or your credit card where applicable.
 
@@ -261,11 +237,12 @@ PART 2: SALE TERMS AND CONDITIONS
 
 4.8.9 unless stated to the contrary, any value will be construed to refer to South African Rands;
 
-and the Seller/participating store agrees that such terms and conditions will include any matters prescribed by us under this Agreement as well as any matter specified in the Guidelines.
-
-5 Buyer
-
-5.1 You agree and warrant to each Seller/participating store and separately to us as well as to any interested party that:
+and the Seller/participating store agrees that such terms and conditions will include any matters prescribed by us under this Agreement as well as any matter specified in the Guidelines.</Text>
+                    
+                    
+          <Text style={styles.tcP}>PART 5:Buyer </Text>
+                    
+                    <Text style={styles.tcL}>{'\u2022'} 5.1 You agree and warrant to each Seller/participating store and separately to us as well as to any interested party that:
 
 5.1.1 your information:
 
@@ -297,29 +274,26 @@ and the Seller/participating store agrees that such terms and conditions will in
 
 5.1.6 you have obtained the necessary information required to comply with the Second Hand Goods Act from the Seller; (if applicable);
 
-5.1.7 if you are purchasing adult goods and services, that you have the legal right to purchase those goods and services.
+5.1.7 if you are purchasing adult goods and services, that you have the legal right to purchase those goods and services.</Text>
 
-6 Ratings, Comments and Feedback
+<Text style={styles.tcP}>PART 6:Ratings, Comments and Feedback</Text>
 
-6.1. It is a condition of using the Services that you agree that feedback, comments and ratings scores may be provided about you as described in the Rating System Rules. If you do not agree to this condition, then please do not accept these terms and conditions.
+
+                  <Text style={styles.tcL}>{'\u2022'}  6.1. It is a condition of using the Services that you agree that feedback, comments and ratings scores may be provided about you as described in the Rating System Rules. If you do not agree to this condition, then please do not accept these terms and conditions.
 
 6.2. Ratings that are given to each other by users should be done as is set out in the Rating System Rules section of this Agreement.
 
 6.3. If you believe a statement made about you pursuant to Clause 6.1 is untrue, misleading or deceptive or defamatory (" Questionable Statement "), please contact our customer service department and we will conduct an investigation. As a result of an investigation, we may (although we are not obliged to) remove the Questionable Statement. Whether or not we conduct an investigation, and irrespective of whether we remove the Questionable Statement, and even if we do not conduct an investigation, because you do not contact us or for any other reason, you hereby release us and forego any rights you may have had against us in relation to the Questionable Statement or any statement made about you pursuant to the Rating System Rules and agree that you will not make any claims or demands, or take any action, issue or maintain any proceedings or suits against us in relation to the Questionable Statement or any statement made about you pursuant to in connection with this Site, or your use of this Site.
 
-6.4 The decision to hold an inquiry or not is entirely within our discretion and we will not be obliged in any way to entertain any representations in this regard.
-
-7 Payment Details - Buyer
-
-7.1 we may request you to provide your valid and current credit card or bank account details to us at any time.
+6.4 The decision to hold an inquiry or not is entirely within our discretion and we will not be obliged in any way to entertain any representations in this regard.</Text>
+                  <Text style={styles.tcP}>PART 7 Payment Details - Buyer </Text>
+                  <Text style={styles.tcL}>{'\u2022'} 7.1 we may request you to provide your valid and current credit card or bank account details to us at any time.
 
 7.2 In addition to any other rights we may have under this Agreement, if you fail to comply with 7.1, we reserve the right to prohibit your access to this site and to the services we provide herein as well as to prevent you from participating in any transactions pursuant to your use of the Yopa mobile application until such time as you provide those credit card details to us.
 
-7.3 In providing us with the information specified in clause 7.1 above, you consent to the processing and/or further processing of such personal information by YOPA in accordance with the Protection of Personal Information Act.
-
-8 YOPA Discretion
-
-8.1 We reserve the right in our sole discretion to alter or remove any information or withdraw any listing/advertisement/offer made by you if:
+7.3 In providing us with the information specified in clause 7.1 above, you consent to the processing and/or further processing of such personal information by YOPA in accordance with the Protection of Personal Information Act. </Text>
+                  <Text style={styles.tcP}>PART 8:YOPA Discretion </Text>
+                  <Text style={styles.tcL}>{'\u2022'} 8.1 We reserve the right in our sole discretion to alter or remove any information or withdraw any listing/advertisement/offer made by you if:
 
 8.1.1 that listing/advertisement/offer of sale of goods or provision of services, as applicable;
 
@@ -339,19 +313,14 @@ and the Seller/participating store agrees that such terms and conditions will in
 
 8.1.9 for any other reason whatsoever,
 
-8.2 you irrevocably and unconditionally agree that any rights that you may have had in respect of any legal action or laying any charge against us in respect of any action we may have taken under this Clause 8, are hereby waived.
+8.2 you irrevocably and unconditionally agree that any rights that you may have had in respect of any legal action or laying any charge against us in respect of any action we may have taken under this Clause 8, are hereby waived. </Text>
+                  <Text style={styles.tcP}>PART 3: GENERAL TERMS AND CONDITIONS </Text>
+                  <Text style={styles.tcP}>9 YOPA May Amend These Terms and Conditions </Text>
+                  <Text style={styles.tcL}>{'\u2022'} 9.1 We have an absolute discretion to amend the terms of this Agreement at any time. If we do so, we will post details of any amendments on this Site that will be effective forthwith.
 
-PART 3: GENERAL TERMS AND CONDITIONS
-
-9 YOPA May Amend These Terms and Conditions
-
-9.1 We have an absolute discretion to amend the terms of this Agreement at any time. If we do so, we will post details of any amendments on this Site that will be effective forthwith.
-
-9.2 By accepting this Agreement and any notifications of amendments to this Agreement, you also agree to accept and be bound by any changes made by us under this Clause 9. In any event, your continued use of the Services after any changes to the terms of this Agreement have taken effect in accordance with Clause 9, will be deemed to be your acceptance of those changes to the terms of this Agreement.
-
-10 Compliance with These Terms and Conditions
-
-10.1 You agree to promptly inform us of any breach by you of the terms of this Agreement and of any conduct of another user that you think may be a breach of this Agreement, whether the conduct has ceased, is continuing, or may occur in the future.
+9.2 By accepting this Agreement and any notifications of amendments to this Agreement, you also agree to accept and be bound by any changes made by us under this Clause 9. In any event, your continued use of the Services after any changes to the terms of this Agreement have taken effect in accordance with Clause 9, will be deemed to be your acceptance of those changes to the terms of this Agreement. </Text>
+                  <Text style={styles.tcP}>10 Compliance with These Terms and Conditions </Text>
+                  <Text style={styles.tcL}>{'\u2022'}10.1 You agree to promptly inform us of any breach by you of the terms of this Agreement and of any conduct of another user that you think may be a breach of this Agreement, whether the conduct has ceased, is continuing, or may occur in the future.
 
 10.2 You agree that we may and will monitor your conduct if we believe that you are not complying with the terms of this Agreement. If we do, then we will respect your confidentiality, unless:
 
@@ -379,11 +348,9 @@ PART 3: GENERAL TERMS AND CONDITIONS
 
 10.4.4.3 restore the Services if and when you can demonstrate clear and complete adherence to the terms of this Agreement on a permanent and consistent basis; and
 
-10.4.4.4 terminate the Agreement that we have entered into with you, and cancel our obligations to provide the Services, if we are not satisfied that you will clearly and completely adhere to the terms of this Agreement, on a permanent and consistent basis, if the Services are restored to you.
-
-11 Use of Site
-
-11.1 In using this Site, you must not:
+10.4.4.4 terminate the Agreement that we have entered into with you, and cancel our obligations to provide the Services, if we are not satisfied that you will clearly and completely adhere to the terms of this Agreement, on a permanent and consistent basis, if the Services are restored to you.  </Text>
+                  <Text style={styles.tcP}>11 Use of Site </Text>
+                  <Text style={styles.tcL}>{'\u2022'}11.1 In using this Site, you must not:
 
 11.1.1 illegally copy, store, use, alter, modify, impair, interfere with or attempt to interfere with, or distribute software or other data;
 
@@ -415,11 +382,9 @@ using services offered through YOPA; and
 
 other purposes a user expressly agrees to.
 
-11.4.2 You agree to respect other users' privacy and disclose your privacy and security policies to them. By law, you must give other users a chance to remove themselves from your database and a chance to review the information you have collected about them.
-
-12 Entering into this Agreement
-
-12.1 You represent and warrant to us:
+11.4.2 You agree to respect other users' privacy and disclose your privacy and security policies to them. By law, you must give other users a chance to remove themselves from your database and a chance to review the information you have collected about them.  </Text>
+                  <Text style={styles.tcP}>12 Entering into this Agreement </Text>
+                  <Text style={styles.tcL}>{'\u2022'} 12.1 You represent and warrant to us:
 
 12.1.1 if you are an individual that you are eighteen (18) years of age or over and of full legal capacity and where necessary you are duly authorised and thus capable of entering into this Agreement on your own behalf alternatively on the behalf of your entity or the entity you are duly authorised to represent and to perform your obligations under this Agreement; or
 
@@ -439,21 +404,15 @@ other purposes a user expressly agrees to.
 
 12.2.3 We strictly reserve our rights to refuse our service, terminate/suspend your account or cancel orders, should YOPA, in our sole discretion find that you have failed for whatsoever reason to comply with the aforementioned provisions or the remaining provisions of these terms and conditions, without prejudice to any other rights that we may have at law.
 
-12.2.4 To the extent that you utilize our services, we shall deem it that you were / are supervised by and that you have obtained the consent of your parent or legal guardian or curator or trustee. The onus to prove that you were not supervised or did obtain the requisite consent shall rest with you.
-
-13 Licence of, and Use of, your Information
-
-13.1 You hereby grant to us a non-exclusive, irrevocable, worldwide, perpetual, royalty-free right to exercise the Intellectual Property Rights you have in your information that you have provided on this site and or on the Yopa mobile application, in whatever medium.
+12.2.4 To the extent that you utilize our services, we shall deem it that you were / are supervised by and that you have obtained the consent of your parent or legal guardian or curator or trustee. The onus to prove that you were not supervised or did obtain the requisite consent shall rest with you. </Text>
+                  <Text style={styles.tcP}>13 Licence of, and Use of, your Information </Text>
+                  <Text style={styles.tcL}>{'\u2022'} 13.1 You hereby grant to us a non-exclusive, irrevocable, worldwide, perpetual, royalty-free right to exercise the Intellectual Property Rights you have in your information that you have provided on this site and or on the Yopa mobile application, in whatever medium.
 
 13.2 Subject to Clause 13.1, we agree to use your information only in accordance with the Privacy Statement below. If you do not agree with the terms of the Privacy Statement, please do not accept these terms and conditions.
 
-13.3 We further agree and/or undertake to process your personal information in accordance with the provisions of the Protection of Personal Information Act.
-
- 
-
-14 Privacy Statement
-
-This privacy statement discloses the privacy practices for the yopa.co.za site.
+13.3 We further agree and/or undertake to process your personal information in accordance with the provisions of the Protection of Personal Information Act. </Text>
+                  <Text style={styles.tcP}>14 Privacy Statement </Text>
+                  <Text style={styles.tcL}>{'\u2022'}This privacy statement discloses the privacy practices for the yopa.co.za site.
 
 We have agreed to notify you of the following when collecting your personal information:
 
@@ -627,11 +586,9 @@ Individuals who register on yopa (Pty) Ltd, and provide their email address, giv
 
 Contacting us
 
-If you have any questions about this privacy statement or any questions regarding access to and the protection of your personal information, the practices of this site, or your dealings with us, you can contact us on info@yopa.co.za, alternatively, click here to view our PAIA/POPI page which contains information regarding access to and the protection of your personal information.
-
-15 User Traffic and its Content
-
-15.1 While we will always endeavour to maintain ongoing access, and, prevent and correct disruptions and failures on this Site, we cannot and do not exercise control over the data, files and other information passing through our computer systems and network resources. Therefore you agree that you:
+If you have any questions about this privacy statement or any questions regarding access to and the protection of your personal information, the practices of this site, or your dealings with us, you can contact us on info@yopa.co.za, alternatively, click here to view our PAIA/POPI page which contains information regarding access to and the protection of your personal information.  </Text>
+                  <Text style={styles.tcP}>15 User Traffic and its Content </Text>
+                  <Text style={styles.tcL}>{'\u2022'} 15.1 While we will always endeavour to maintain ongoing access, and, prevent and correct disruptions and failures on this Site, we cannot and do not exercise control over the data, files and other information passing through our computer systems and network resources. Therefore you agree that you:
 
 15.1.1 are responsible for the flow and storage of your information through our computer systems and network resources;
 
@@ -647,11 +604,9 @@ If you have any questions about this privacy statement or any questions regardin
 
 15.2.1 when and how your account with us is used; and
 
-15.2.2 the actions of the people (if any) you allow to access, or transmit information through this Site, our computer systems and network resources or otherwise utilise the Services (whether or not you have given them your login and password details or not).
-
-16 Commercial Uses of YOPA Services
-
-16.1 We cannot and do not take any responsibility for any commercial enterprises you may conduct as the proprietor of any goods or services that you have chosen to sell or buy in reliance on a listing/advertisement/offering made as a consequence of your registration this Site, our computer systems, network resources or the Services as part of a business or profit-making activity. Specifically:
+15.2.2 the actions of the people (if any) you allow to access, or transmit information through this Site, our computer systems and network resources or otherwise utilise the Services (whether or not you have given them your login and password details or not). </Text>
+                  <Text style={styles.tcP}>16 Commercial Uses of YOPA Services </Text>
+                  <Text style={styles.tcL}>{'\u2022'} 16.1 We cannot and do not take any responsibility for any commercial enterprises you may conduct as the proprietor of any goods or services that you have chosen to sell or buy in reliance on a listing/advertisement/offering made as a consequence of your registration this Site, our computer systems, network resources or the Services as part of a business or profit-making activity. Specifically:
 
 16.1.1 if you, or those whom you permit to use your account, choose to rely upon this Site, our computer systems, network resources or the Services in any manner to support a business or other profit-making activity, you do so at your own risk absolutely; and
 
@@ -659,9 +614,9 @@ If you have any questions about this privacy statement or any questions regardin
 
 16.2 The Services on this Site are provided to you personally or your entity, whatever the case may be, and you must never resell, trade, or barter your rights to use the Services to another person or persons nor permit any third party to use the Services.
 
-17 Relying Upon YOPA’S Services
-
-17.1 Whether you are using the Services for private or commercial purposes, or both, the quality and continuity of our Services depends on many factors over which we have no control and cannot seek to control. While we will always endeavour to maintain ongoing access, disruptions and failures of this Site, any or all computer systems, network resources and the Services, are probable in such an operating environment. Recognising this, you agree that:
+      </Text>
+                  <Text style={styles.tcP}>17 Relying Upon YOPA’S Services </Text>
+                  <Text style={styles.tcL}>{'\u2022'}17.1 Whether you are using the Services for private or commercial purposes, or both, the quality and continuity of our Services depends on many factors over which we have no control and cannot seek to control. While we will always endeavour to maintain ongoing access, disruptions and failures of this Site, any or all computer systems, network resources and the Services, are probable in such an operating environment. Recognising this, you agree that:
 
 17.1.1 we cannot and do not guarantee, warrant or otherwise imply that:
 
@@ -669,11 +624,9 @@ If you have any questions about this privacy statement or any questions regardin
 
 17.1.1.2 you will receive unlimited access to all of the content available on the Site at any given time;
 
-17.1.2 we cannot always ensure that this Site, its computer systems and network resources will be fully or continually protected from unlawful access by others, including the infection of data or other information by viruses, or the alteration, misuse, or stealing of data or other information or that any of these activities will be detected.
-
-18 Disclaimer and Limitation of Liability
-
-18.1 Notwithstanding, and in addition to any other provision in this Agreement, you agree that we will not be liable to you or any other person for any loss, damage, expense, or other amounts incurred, savings foregone, or hardship suffered, by any person however arising (including where the cause cannot be determined), or whether it arose directly or indirectly from any authorised or unauthorised use of, access to, reliance on, or any inability to use or access this Site, the Services, or as a consequence of such use, access, reliance, or inability to access, including, but not limited to any loss relating to one or more, or a combination, of the following:
+17.1.2 we cannot always ensure that this Site, its computer systems and network resources will be fully or continually protected from unlawful access by others, including the infection of data or other information by viruses, or the alteration, misuse, or stealing of data or other information or that any of these activities will be detected.  </Text>
+                  <Text style={styles.tcP}>18 Disclaimer and Limitation of Liability </Text>
+                  <Text style={styles.tcL}>{'\u2022'}18.1 Notwithstanding, and in addition to any other provision in this Agreement, you agree that we will not be liable to you or any other person for any loss, damage, expense, or other amounts incurred, savings foregone, or hardship suffered, by any person however arising (including where the cause cannot be determined), or whether it arose directly or indirectly from any authorised or unauthorised use of, access to, reliance on, or any inability to use or access this Site, the Services, or as a consequence of such use, access, reliance, or inability to access, including, but not limited to any loss relating to one or more, or a combination, of the following:
 
 18.1.1 a failure, or error in the operation, of all or any part of this Site, our computer systems, network resources, the Services, or any other computer systems or network resources to which they may be connected or upon which they may rely, or the taking offline of any of those computer systems or network resources for any reason;
 
@@ -719,11 +672,9 @@ If you have any questions about this privacy statement or any questions regardin
 
 18.3.2.2 the payment of the cost of having the services supplied again.
 
-18.4 Notwithstanding anything else in this Agreement if an Indemnified Party is liable to you, whether in respect of negligence or other delict, breach of contract or warranty, breach of statute or statutory duty, equity or otherwise directly or indirectly in relation to the performance of or any delay or failure in the performance of its obligations under this Agreement, the maximum aggregate liability of an Indemnified Party, in respect of all claims made by you for every 12 month period commencing on the execution of this Agreement or the anniversary thereof shall be R100.
-
-19 Release and Indemnity
-
-19.1 Notwithstanding, and in addition to any other provision in this Agreement, to the maximum extent permitted by law, you agree to release from, and indemnify, each Indemnified Party, against, any claims, losses, liabilities, suits, demands, proceedings, costs or expenses (including legal costs on a full indemnity basis) directly or indirectly related to, or, arising out of:
+18.4 Notwithstanding anything else in this Agreement if an Indemnified Party is liable to you, whether in respect of negligence or other delict, breach of contract or warranty, breach of statute or statutory duty, equity or otherwise directly or indirectly in relation to the performance of or any delay or failure in the performance of its obligations under this Agreement, the maximum aggregate liability of an Indemnified Party, in respect of all claims made by you for every 12 month period commencing on the execution of this Agreement or the anniversary thereof shall be R100  </Text>
+                  <Text style={styles.tcP}>19 Release and Indemnity </Text>
+                  <Text style={styles.tcL}>{'\u2022'} 19.1 Notwithstanding, and in addition to any other provision in this Agreement, to the maximum extent permitted by law, you agree to release from, and indemnify, each Indemnified Party, against, any claims, losses, liabilities, suits, demands, proceedings, costs or expenses (including legal costs on a full indemnity basis) directly or indirectly related to, or, arising out of:
 
 19.1.1 your use of the Services;
 
@@ -741,11 +692,11 @@ If you have any questions about this privacy statement or any questions regardin
 
 19.2.1 expenses incurred by us that are unreasonable; or
 
-19.2.2 losses occasioned by us as a result of this Agreement proving not to be profitable to us.
+19.2.2 losses occasioned by us as a result of this Agreement proving not to be profitable to us. </Text>
+                  <Text style={styles.tcP}>20 Disputes
 
-20 Disputes
-
-20.1 You and YOPA must follow the procedure for resolving any dispute in connection with or arising out of this Agreement, in accordance with this Clause 20 before starting any proceedings (except proceedings seeking urgent interlocutory relief).
+</Text>
+                  <Text style={styles.tcL}>{'\u2022'} 20.1 You and YOPA must follow the procedure for resolving any dispute in connection with or arising out of this Agreement, in accordance with this Clause 20 before starting any proceedings (except proceedings seeking urgent interlocutory relief).
 
 20.2 The procedure for resolving a dispute is as follows:
 
@@ -755,47 +706,31 @@ If you have any questions about this privacy statement or any questions regardin
 
 20.2.3 failing such a resolution, the dispute, if arbitrable in law, shall be finally resolved in accordance with the Rules of the Arbitration Foundation of Southern Africa by an arbitrator(s) appointed by the Foundation.
 
-20.3 You shall be liable for all costs incurred by us in the enforcement of any rights which we have in terms of this Agreement or in the recovery of any monies due to us, including collection charges and costs on an attorney and own client scale and costs of counsel as on brief whether incurred prior to or during the institution of legal proceedings or if judgement has been granted in connection with the satisfaction or enforcement of such judgement against you.
-
-21 Entire Agreement
-
-21.1 this Agreement constitutes the entire Agreement between you and YOPA.
+20.3 You shall be liable for all costs incurred by us in the enforcement of any rights which we have in terms of this Agreement or in the recovery of any monies due to us, including collection charges and costs on an attorney and own client scale and costs of counsel as on brief whether incurred prior to or during the institution of legal proceedings or if judgement has been granted in connection with the satisfaction or enforcement of such judgement against you. </Text>
+                  <Text style={styles.tcP}>21 Entire Agreement </Text>
+                  <Text style={styles.tcL}>{'\u2022'} 21.1 this Agreement constitutes the entire Agreement between you and YOPA.
 
 21.2 If there is any conflict between this Agreement and any other ancillary Agreement or annexures, the provisions of this Agreement shall prevail.
 
-21.3 Unless the context indicates otherwise, this Agreement incorporates all other Agreements between the parties.  Should there be any conflict between any other agreement and this Agreement, the provisions of this Agreement shall prevail.
+21.3 Unless the context indicates otherwise, this Agreement incorporates all other Agreements between the parties.  Should there be any conflict between any other agreement and this Agreement, the provisions of this Agreement shall prevail. </Text>
+                  <Text style={styles.tcP}>22 Remedies Cumulative </Text>
+                  <Text style={styles.tcL}>{'\u2022'} All rights and remedies provided in this Agreement are cumulative and are not exclusive of any rights or remedies provided by law. A notice dealing with amendments or variations or updates of this Agreement will be posted on our website .It is your duty and responsibility to familiarize and understand the amendments or variations or updates.  By continuing to use our services, you are deemed to have accepted the amendment, variation or update as binding on you. </Text>
+                  <Text style={styles.tcP}>23 Relationship Of Parties </Text>
+                  <Text style={styles.tcL}>{'\u2022'} Nothing in this Agreement shall be deemed to constitute any party as the agent, partner or joint venturer of another party. </Text>
+                  <Text style={styles.tcP}>24 Further Assurances  </Text>
+                  <Text style={styles.tcL}>{'\u2022'} A party shall take all such steps, execute all such documents and do all such acts and things as may be reasonably required by another party to give effect to any of the transactions contemplated by this Agreement. </Text>
+                  <Text style={styles.tcP}>25 Non-Waiver </Text>
+                  <Text style={styles.tcL}>{'\u2022'} Other than as otherwise specified in this Agreement, neither the failure of a party to enforce at any time any of the provisions of this Agreement nor the granting of any time or other indulgence shall be construed as a waiver of that provision or of the right of that party thereafter to enforce that or any other provision.  </Text>
+                  <Text style={styles.tcP}>26 Governing Law </Text>
+                  <Text style={styles.tcL}>{'\u2022'} 26.1 This Agreement will be governed by the laws in force in the Republic of South Africa and each party unconditionally submits to the non-exclusive jurisdiction of the court of the Republic of South Africa in relation to any legal action, suit or proceedings arising out of or with respect to this Agreement.
 
-22 Remedies Cumulative
-
-All rights and remedies provided in this Agreement are cumulative and are not exclusive of any rights or remedies provided by law. A notice dealing with amendments or variations or updates of this Agreement will be posted on our website .It is your duty and responsibility to familiarize and understand the amendments or variations or updates.  By continuing to use our services, you are deemed to have accepted the amendment, variation or update as binding on you.
-
-23 Relationship Of Parties
-
-Nothing in this Agreement shall be deemed to constitute any party as the agent, partner or joint venturer of another party.
-
-24 Further Assurances
-
-A party shall take all such steps, execute all such documents and do all such acts and things as may be reasonably required by another party to give effect to any of the transactions contemplated by this Agreement.
-
-25 Non-Waiver
-
-Other than as otherwise specified in this Agreement, neither the failure of a party to enforce at any time any of the provisions of this Agreement nor the granting of any time or other indulgence shall be construed as a waiver of that provision or of the right of that party thereafter to enforce that or any other provision.
-
-26 Governing Law
-
-26.1 This Agreement will be governed by the laws in force in the Republic of South Africa and each party unconditionally submits to the non-exclusive jurisdiction of the court of the Republic of South Africa in relation to any legal action, suit or proceedings arising out of or with respect to this Agreement.
-
-26.2 With reference to clause 26.1, the parties submit to the jurisdiction of the High Court of South Africa, South Gauteng High Court and the parties submit to the jurisdiction of the Magistrate’s Court or the Regional Court irrespective of whether the amount claimed by us exceeds the applicable monetary limit allowed to institute a claim in the Magistrate’s Court or Regional Court.
-
-27 Notices
-
-You choose your domicilium citandi et executandi (“domicilium”) for the purposes of giving any notice serving any legal process and for any other purpose arising from this Agreement at your addresses, e-mail and telefax numbers as set out in your application for registration on this site. Any notice to be served by either party to the other must be in writing and will be sent by hand delivery, post or facsimile, or email to the relevant party to this agreement at its respective address as specified on the application for registration on this Site and, in the case of YOPA,[INSERT ADDRESS], South Africa and in the case of mail will be deemed to have been served three (3) business days after posting. In the case of a facsimile it will be deemed to have been served on receipt of a successful transmission notice and in the case of email it will be deemed to have been served if no return email stating that the email cannot be delivered is received. If a notice is served by hand and proof thereof is made available, the notice will then be deemed to be delivered on the actual date and time of delivery.
-
-</Text>
+26.2 With reference to clause 26.1, the parties submit to the jurisdiction of the High Court of South Africa, South Gauteng High Court and the parties submit to the jurisdiction of the Magistrate’s Court or the Regional Court irrespective of whether the amount claimed by us exceeds the applicable monetary limit allowed to institute a claim in the Magistrate’s Court or Regional Court. </Text>
+                  <Text style={styles.tcP}>27 Notices </Text>
+                  <Text style={styles.tcL}>{'\u2022'} You choose your domicilium citandi et executandi (“domicilium”) for the purposes of giving any notice serving any legal process and for any other purpose arising from this Agreement at your addresses, e-mail and telefax numbers as set out in your application for registration on this site. Any notice to be served by either party to the other must be in writing and will be sent by hand delivery, post or facsimile, or email to the relevant party to this agreement at its respective address as specified on the application for registration on this Site and, in the case of YOPA,[INSERT ADDRESS], South Africa and in the case of mail will be deemed to have been served three (3) business days after posting. In the case of a facsimile it will be deemed to have been served on receipt of a successful transmission notice and in the case of email it will be deemed to have been served if no return email stating that the email cannot be delivered is received. If a notice is served by hand and proof thereof is made available, the notice will then be deemed to be delivered on the actual date and time of delivery. </Text>
                 
             </ScrollView>
 
-            <TouchableOpacity disabled={ !this.state.accepted } onPress={ ()=>{this.props.navigation.navigate('SignUp')} } style={ this.state.accepted ? styles.button : styles.buttonDisabled }><Text style={styles.buttonLabel}>Accept</Text></TouchableOpacity>
+            <TouchableOpacity disabled={ !this.state.accepted } onPress={ ()=>alert("Terms and conditions accepted") } style={ this.state.accepted ? styles.button : styles.buttonDisabled }><Text style={styles.buttonLabel}>Accept</Text></TouchableOpacity>
       </View>
     );
   }
