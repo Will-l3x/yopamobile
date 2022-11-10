@@ -108,7 +108,7 @@ clearAll = async () => {
                   flex: 1,
                   justifyContent: 'space-between',
                 }}>
-                <Checkbox
+                <Checkbox.IOS
                   color= {`#35CAAC`} uncheckedColor={`#35CAAC`}
                   status={item.isChecked}
                   onPress={() => {

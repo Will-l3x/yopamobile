@@ -74,11 +74,9 @@ export default class SignUp extends React.Component {
     }
     render(){
         return (
+            <KeyboardAvoidingView style={{flex:1}}>
             <View style={styles.container}>
-                <View style={styles.logoContainer}>
                 
-                    <Text style={styles.logo}>ItsYopa!</Text>
-                </View>
                 <View style={styles.formView}>
                     <Text style={styles.formHeading}>Create Your Account </Text>
                    
@@ -150,6 +148,7 @@ export default class SignUp extends React.Component {
 
 
             </View>
+            </KeyboardAvoidingView>
         );
     }
 }

@@ -54,9 +54,7 @@ export default class LogIn extends React.Component {
                     <Image source = {logs} style ={styles.logos} resizeMode="contain"/>
                 </View>
 
-                <View style={styles.logoContainer}>
-                    <Text style={styles.logo}>WELCOME!</Text>
-                </View>
+               
                 <View style={styles.formView}>
                     <Text style={styles.formHeading}>Log Into Your Account </Text>
                     <View style={styles.inputView}>
