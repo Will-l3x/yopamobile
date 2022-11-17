@@ -20,7 +20,7 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.itsyopa.yopamobile",
-      "buildNumber":"2"
+      "buildNumber":"3"
     },
     "android": {
       "adaptiveIcon": {
