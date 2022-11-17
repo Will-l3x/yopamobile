@@ -12,10 +12,10 @@ import {
 import Constants from 'expo-constants';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
-
+import Checkbox from 'expo-checkbox';
 
 // or any pure javascript modules available in npm
-import { Card, Checkbox } from 'react-native-paper';
+import { Card } from 'react-native-paper';
 
 const data = [
   { id: 1, txt: 'Clothes & Fashion', isChecked: false },
@@ -46,7 +46,7 @@ export default class Interest extends Component {
    storeData = async () => {
     try {
       await AsyncStorage.setItem('Choices', JSON.stringify(this.state.products))
-      this.props.navigation.navigate('TabIndex');
+      this.props.navigation.navigate('Tabs');
     } catch (e) {
       // saving error
     }
@@ -108,10 +108,10 @@ clearAll = async () => {
                   flex: 1,
                   justifyContent: 'space-between',
                 }}>
-                <Checkbox.IOS
+                <Checkbox
                   color= {`#35CAAC`} uncheckedColor={`#35CAAC`}
-                  status={item.isChecked}
-                  onPress={() => {
+                  value={item.isChecked}
+                  onValueChange={() => {
                     this.handleChange(item.id);
                   }}
                 />

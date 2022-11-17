@@ -57,7 +57,7 @@ export default class SignUp extends React.Component {
             alert(response.data.message);
             AsyncStorage.setItem('token', JSON.stringify(response.data.token))
             console.log("data logged successfuly")
-            this.props.navigation.navigate('picks');
+            this.props.navigation.navigate('Interest');
         }else{
            alert(response.data.message);
         }

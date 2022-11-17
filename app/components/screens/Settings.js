@@ -9,7 +9,7 @@ import {
 } from 'react-native-paper';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 
@@ -23,6 +23,16 @@ class Settings extends Component {
         }
     }
 
+    clearAll = async () => {
+      try {
+        await AsyncStorage.clear()
+        this.props.navigation.navigate("LogIn")
+      } catch(e) {
+        // clear error
+      }
+    
+      console.log('Done.')
+    }
     render(){
         return(
             <SafeAreaView style={styles.container}>
@@ -47,7 +57,7 @@ class Settings extends Component {
                   <Text style={styles.menuItemText}>Edit Profile</Text>
                 </View>
               </TouchableRipple>
-              <TouchableRipple onPress={()=>{BackHandler.exitApp()}}>
+              <TouchableRipple onPress={()=>{this.clearAll()}}>
                 <View style={styles.menuItem}>
                   <Icon name="location-exit" color="#35CAAC" size={25}/>
                   <Text style={styles.menuItemText}>Log Out</Text>

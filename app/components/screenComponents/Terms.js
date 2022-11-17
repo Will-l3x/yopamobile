@@ -730,7 +730,7 @@ If you have any questions about this privacy statement or any questions regardin
                 
             </ScrollView>
 
-            <TouchableOpacity disabled={ !this.state.accepted } onPress={ ()=>alert("Terms and conditions accepted") } style={ this.state.accepted ? styles.button : styles.buttonDisabled }><Text style={styles.buttonLabel}>Accept</Text></TouchableOpacity>
+            <TouchableOpacity disabled={ !this.state.accepted } onPress={ ()=>{this.props.navigation.navigate('SignUp')} } style={ this.state.accepted ? styles.button : styles.buttonDisabled }><Text style={styles.buttonLabel}>Accept</Text></TouchableOpacity>
       </View>
     );
   }

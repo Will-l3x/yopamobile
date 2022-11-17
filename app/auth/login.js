@@ -35,7 +35,7 @@ export default class LogIn extends React.Component {
         if (response.data.success === true){
             alert(response.data.message);
             AsyncStorage.setItem('token', JSON.stringify(response.data.token))
-            this.props.navigation.navigate('TabIndex');
+            this.props.navigation.navigate('Tabs');
         }else{
             alert(response.data.message);
         }
