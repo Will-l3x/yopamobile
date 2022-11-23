@@ -26,6 +26,40 @@ class Notifications extends Component {
                 
             </View>
 
+            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Web', {Weburi: 'https://www.pnp.co.za/pnpstorefront/pnp/en/All-Products/Home%2C-Appliances-%26-Outdoor/Braai-%26-Camping/Camping/Hard-Cooler-Boxes/Big-Jim-Cooler-Box-25l/p/000000000000776299_EA' })}}>
+            <View style={{flexDirection:'row',  borderWidth:2, borderLeftWidth:0, borderRightWidth: 0,
+                 borderColor: '#DCDEDD', height: 90, width:360}}>
+
+                <Image source={require('../../../assets/logo2.png')} style={{width: 40, maxWidth: 45, height:40, borderRadius: 200/2}}   />
+                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black',  textDecorationStyle:'solid', paddingLeft:10 }}> Pick n Pay</Text>
+                <Text style={{ fontWeight: 'normal', marginTop: 10, color:'black',  textDecorationStyle:'solid', paddingLeft:10 }}> Cooler Box</Text>
+                
+            </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Web', {Weburi: 'https://www.checkers.co.za/All-Departments/Clothing-and-Footwear/Adult-Clothing/Sleepwear/Grey-and-Navy-Blue-S-XXL-Mens-Sleep-Set-2-Piece/p/10788355EA' })}}>
+            <View style={{flexDirection:'row',  borderWidth:2, borderLeftWidth:0, borderRightWidth: 0,
+                 borderColor: '#DCDEDD', height: 90, width:360}}>
+
+                <Image source={require('../../../assets/logo2.png')} style={{width: 40, maxWidth: 45, height:40, borderRadius: 200/2}}   />
+                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black',  textDecorationStyle:'solid', paddingLeft:10 }}> Checkers</Text>
+                <Text style={{ fontWeight: 'normal', marginTop: 10, color:'black',  textDecorationStyle:'solid', paddingLeft:10 }}> Clothig</Text>
+                
+            </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Web', {Weburi: 'https://www.shoprite.co.za/All-Departments/Health-and-Beauty/Personal-Grooming/Mens-Shaving/Nivea-Men-Extra-Moisturising-Shaving-Gel-200ml/p/10183472EA' })}}>
+            <View style={{flexDirection:'row',  borderWidth:2, borderLeftWidth:0, borderRightWidth: 0,
+                 borderColor: '#DCDEDD', height: 90, width:360}}>
+
+                <Image source={require('../../../assets/logo2.png')} style={{width: 40, maxWidth: 45, height:40, borderRadius: 200/2}}   />
+                <Text style={{ fontWeight: 'bold', marginTop: 10, color:'black',  textDecorationStyle:'solid', paddingLeft:10 }}> Shoprite</Text>
+                <Text style={{ fontWeight: 'normal', marginTop: 10, color:'black',  textDecorationStyle:'solid', paddingLeft:10 }}> Men grooming</Text>
+                
+            </View>
+            </TouchableOpacity>
+
+
             <TouchableOpacity onPress={()=>{this.props.navigation.navigate('Interest')}}>
             <View style={{flexDirection:'row',  borderWidth:2, borderLeftWidth:0, borderRightWidth: 0,
                  borderColor: '#DCDEDD', height: 90, width:360}}>
@@ -67,7 +101,12 @@ class Notifications extends Component {
                 
             </View>
             </TouchableOpacity>
+
+
+            
       </View>
+
+      
     );
   }
 }
